@@ -9,7 +9,7 @@ import "./styles/app.scss";
 
 function App() {
   const [pageStatus, setPageStatus] = useState(0);
-  return ( test
+  return (
     <div className="App">
       <Home pageStatus={pageStatus} setPageStatus={setPageStatus} />
       <Game pageStatus={pageStatus} />
