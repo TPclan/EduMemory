@@ -1,8 +1,13 @@
 .game {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
   align-items: center;
   justify-content: center;
   background: lightcoral;
+  img {
+    width: 10%;
+    border-radius: 20px;
+    border: 5px solid black;
+    margin: 1rem;
+  }
 }
