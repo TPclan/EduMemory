@@ -9,9 +9,11 @@ const Home = ({ setPageStatus, pageStatus }) => {
         <h1>EduMemory</h1>
         <img alt="EduMemory logo" src={logo}></img>
       </div>
-      <button onClick={() => setPageStatus(1)}>Play</button>
-      <button onClick={() => setPageStatus(2)}>How To Play</button>
-      <button onClick={() => setPageStatus(3)}>Tom's MYP</button>
+      <button onClick={() => setPageStatus(1)} className="play-button">
+        Play
+      </button>
+      <button className="tutorial-button">How To Play</button>
+      <button className="about-button">Tom's MYP</button>
     </div>
   );
 };
