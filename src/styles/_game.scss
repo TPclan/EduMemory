@@ -6,3 +6,22 @@
   justify-content: center;
   background: lightcoral;
 }
+
+.home-button {
+  background-color: rgb(64, 154, 184);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 25px;
+  outline: none;
+  margin: 2rem;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background: rgb(47, 120, 144);
+  }
+}
