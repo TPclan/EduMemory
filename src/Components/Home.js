@@ -1,8 +1,5 @@
 import React from "react";
 //Import Images or Logos
-//Temporarily disable logo. throwing error when going live
-// Need to change this back later: <img alt="EduMemory logo" src={logo}></img>
-//import logo from "../icons/EduLogo.ico";
 import logo from "../icons/brain-2.svg";
 
 const Home = ({ setPageStatus, pageStatus }) => {

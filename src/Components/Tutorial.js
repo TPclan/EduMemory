@@ -1,14 +1,11 @@
 import React from "react";
-//import logo from "../icons/EduLogo.ico";
-//Import Images or Logos
-//Temporarily disable logo. throwing error when going live
-// Need to change this back later: <img alt="EduMemory logo" src={logo}></img>
+import logo from "../icons/brain-2.svg";
 
 const Tutorial = () => {
   return (
     <div className="tutorial">
       <h1>EduMemory</h1>
-      {/* <img alt="EduMemory logo" src={logo}></img> */}
+      <img alt="EduMemory logo" src={logo}></img>
       <div className="main-body">
         <h2>How do you play?</h2>
         <p>
