@@ -1,0 +1,13 @@
+{"lead":{"first_name": "{{11.`centah-response`.lead[].customer[].`first-name`[]}}","last_name": "{{11.`centah-response`.lead[].customer[].`last-name`[]}}",
+"lead_source_id":"4000209435",
+"lead_stage_id":"4000092176",
+"work_number": "{{11.`centah-response`.lead[].customer[].`primary-phone`[].phone[]}}","email": "{{11.`centah-response`.lead[].customer[].email[]}}","address": "{{11.`centah-response`.lead[].customer[].address[].`street-number`[]}} {{11.`centah-response`.lead[].customer[].address[].street[]}}","city": "{{11.`centah-response`.lead[].customer[].address[].city[]}}",
+    "zipcode": "{{11.`centah-response`.lead[].customer[].address[].`postal-code`[]}}"
+,"custom_field": {"cf_centahid": 
+{{11.`centah-response`.lead[].id[]}}
+,"cf_costco_warehouse":{{switch(11.`centah-response`.lead[].store[].no[]; 255; """255 Port Coquitlam"""; 163; """163 Abbotsford"""; 552; """552 Vancouver"""; 55; """55 Surrey"""; 259; """259 Langley"""; 51; """51 Burnaby (Brighton ave)"""; 548; """548 Burnaby (Willingdon)"""; 54; """54 Richmond"""; """other""")}},"cf_quote_type":"Costco","cf_centah_notes": {{62.value}}}
+}}
+
+https://lasting-grub-95.hasura.app/v1/graphql
+
+{"query":"mutation MyMutation {\r\n  insert_t_user(objects: {id: \"12\", name: \"Cal\"}) {\r\n    affected_rows\r\n  }\r\n}","variables":{}}
