@@ -1,9 +1,17 @@
 import React from "react";
-import logo from "../icons/brain-2.svg";
 
-const Tutorial = () => {
+import logo from "../icons/EduLogo.ico";
+import HomeButton from "../img/home-button.svg";
+
+
+const Tutorial = ({ setPageStatus }) => {
   return (
     <div className="tutorial">
+      <div className="home-button">
+        <button onClick={() => setPageStatus(0)} class="homeButton">
+          <img src={HomeButton} alt="Home Button" />
+        </button>
+      </div>
       <h1>EduMemory</h1>
       <img alt="EduMemory logo" src={logo}></img>
       <div className="main-body">
