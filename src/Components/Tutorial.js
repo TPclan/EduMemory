@@ -1,6 +1,8 @@
 import React from "react";
+
 import logo from "../icons/EduLogo.ico";
 import HomeButton from "../img/home-button.svg";
+
 
 const Tutorial = ({ setPageStatus }) => {
   return (

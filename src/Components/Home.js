@@ -1,6 +1,6 @@
 import React from "react";
 //Import Images or Logos
-import logo from "../icons/EduLogo.ico";
+import logo from "../icons/brain-2.svg";
 
 const Home = ({ setPageStatus, pageStatus }) => {
   return (
