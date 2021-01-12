@@ -1,4 +1,15 @@
-import React from "react";
+// import React from "react";
+import React, { useState, useEffect } from "react";
+import { useSpring, animated as a } from "react-spring";
+
+export default function Game() {
+  const [options, setOptions] = useState(null)
+  const [highScore, setHighScore] = useState(0)
+
+  useEffect(() => {
+    // Loads when the game starts
+  }, [])
+
 
 const Game = ({ setPageStatus, pageStatus }) => {
   return (
