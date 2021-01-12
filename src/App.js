@@ -8,7 +8,7 @@ import Tutorial from "./Components/Tutorial";
 import "./styles/app.scss";
 
 function App() {
-  const [pageStatus, setPageStatus] = useState(1);
+  const [pageStatus, setPageStatus] = useState(0);
   return (
     <div className="App">
       <section>
