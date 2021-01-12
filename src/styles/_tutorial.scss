@@ -1,5 +1,6 @@
 .tutorial {
   min-height: 100vh;
+  min-width: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,9 +27,34 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 27%;
+    width: 6rem;
     margin-top: 0rem;
     margin-bottom: 2rem;
+  }
+}
+.home-button {
+  button {
+    margin: 1rem;
+    border: none;
+    background-color: lightBlue;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: lightblue;
+    outline: none;
+    cursor: pointer;
+    & :hover {
+      background: rgb(83, 147, 168);
+      border-radius: 5px;
+    }
+  }
+  img {
+    margin: auto;
+    width: 90%;
+    border-radius: 20px;
+    border: none;
   }
 }
 .main-body {

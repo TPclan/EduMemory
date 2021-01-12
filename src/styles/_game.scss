@@ -1,13 +1,39 @@
 .game {
   min-height: 100vh;
+  min-width: 100%;
   display: inline-block;
   align-items: center;
   justify-content: center;
-  background: lightcoral;
+  background: lightblue;
   img {
     width: 10%;
     border-radius: 20px;
     border: 5px solid black;
     margin: 1rem;
+  }
+}
+.home-button {
+  button {
+    margin: 1rem;
+    border: none;
+    background-color: lightBlue;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: lightblue;
+    outline: none;
+    cursor: pointer;
+    & :hover {
+      background: rgb(83, 147, 168);
+      border-radius: 5px;
+    }
+  }
+  img {
+    margin: auto;
+    width: 90%;
+    border-radius: 20px;
+    border: none;
   }
 }

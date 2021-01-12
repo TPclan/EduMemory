@@ -11,10 +11,16 @@ import Card9 from "../img/cartoon-animals/card-9.png";
 import Card14 from "../img/cartoon-animals/card-14.png";
 import Card11 from "../img/cartoon-animals/card-11.png";
 import Card12 from "../img/cartoon-animals/card-12.png";
+import HomeButton from "../img/home-button.svg";
 
-const Game = ({ pageStatus }) => {
+const Game = ({ setPageStatus }) => {
   return (
-    <div className={`game ${pageStatus ? "active-game" : ""}`}>
+    <div className="game">
+      <div className="home-button">
+        <button onClick={() => setPageStatus(0)} class="homeButton">
+          <img src={HomeButton} alt="Home Button" />
+        </button>
+      </div>
       <h1>EduMemory</h1>
       <div className="cards">
         <img className="card-1" src={Card1} alt="card-1" />
