@@ -1,37 +1,289 @@
-import React from "react";
-import Card1 from "../img/cartoon-animals/card-1.png";
-import Card2 from "../img/cartoon-animals/card-2.png";
-import Card3 from "../img/cartoon-animals/card-3.png";
-import Card4 from "../img/cartoon-animals/card-4.png";
-import Card5 from "../img/cartoon-animals/card-5.png";
-import Card6 from "../img/cartoon-animals/card-6.png";
-import Card7 from "../img/cartoon-animals/card-7.png";
-import Card8 from "../img/cartoon-animals/card-8.png";
-import Card9 from "../img/cartoon-animals/card-9.png";
-import Card14 from "../img/cartoon-animals/card-14.png";
-import Card11 from "../img/cartoon-animals/card-11.png";
-import Card12 from "../img/cartoon-animals/card-12.png";
 
-const Game = ({ pageStatus }) => {
+// import React from "react";
+import React, { useState, useEffect } from "react";
+import { useSpring, animated as a } from "react-spring";
+
+export default function Game({ setPageStatus, pageStatus }) {
+  const [options, setOptions] = useState(null);
+  const [highScore, setHighScore] = useState(0);
+
+  //This will check to see if new score is high score
+  useEffect(() => {
+    const json = localStorage.getItem("memorygamehighscore");
+    const savedScore = JSON.parse(json);
+    if (savedScore) {
+      setHighScore(savedScore);
+    }
+  }, []);
+
+
   return (
     <div className={`game ${pageStatus ? "active-game" : ""}`}>
+      <button className="home-button" onClick={() => setPageStatus(0)}>
+        Go Home
+      </button>
       <h1>EduMemory</h1>
-      <div className="cards">
-        <img className="card-1" src={Card1} alt="card-1" />
-        <img className="card-2" src={Card2} alt="card-2" />
-        <img className="card-3" src={Card3} alt="card-3" />
-        <img className="card-4" src={Card4} alt="card-4" /> <br />
-        <img className="card-5" src={Card5} alt="card-5" />
-        <img className="card-6" src={Card6} alt="card-6" />
-        <img className="card-7" src={Card7} alt="card-7" />
-        <img className="card-8" src={Card8} alt="card-8" /> <br />
-        <img className="card-9" src={Card9} alt="card-9" />
-        <img className="card-14" src={Card14} alt="card-14" />
-        <img className="card-11" src={Card11} alt="card-11" />
-        <img className="card-12" src={Card12} alt="card-12" />
+
+      <h2>Game</h2>
+
+      <div className="container">
+        <h1>Memory Game</h1>
+        <div>High Score: {highScore}</div>
+        <div>
+          {options === null ? (
+            <>
+              <button className="home-button" onClick={() => setOptions(12)}>
+                Easy
+              </button>
+              <button className="home-button" onClick={() => setOptions(18)}>
+                Medium
+              </button>
+              <button className="home-button" onClick={() => setOptions(24)}>
+                Hard
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                className="home-button"
+                onClick={() => {
+                  const prevOptions = options;
+                  setOptions(null);
+                  setTimeout(() => {
+                    setOptions(prevOptions);
+                  }, 5);
+                }}
+              >
+                Start Over
+              </button>
+              <button className="home-button" onClick={() => setOptions(null)}>
+                Main Menu
+              </button>
+            </>
+          )}
+        </div>
       </div>
+
+      {options ? (
+        <MemoryGame
+          options={options}
+          setOptions={setOptions}
+          highScore={highScore}
+          setHighScore={setHighScore}
+        />
+      ) : (
+        <h2>Choose a difficulty to begin!</h2>
+      )}
     </div>
   );
-};
+}
 
-export default Game;
+//Game Board. Put in another file
+function MemoryGame({ options, setOptions, highScore, setHighScore }) {
+  const [game, setGame] = useState([]);
+  const [flippedCount, setFlippedCount] = useState(0);
+  const [flippedIndexes, setFlippedIndexes] = useState([]);
+
+  const colors = [
+    "#ecdb54",
+    "#e34132",
+    "#6ca0dc",
+    "#944743",
+    "#dbb2d1",
+    "#ec9787",
+    "#00a68c",
+    "#645394",
+    "#6c4f3d",
+    "#ebe1df",
+    "#bc6ca7",
+    "#bfd833",
+  ];
+
+  useEffect(() => {
+    const newGame = [];
+    for (let i = 0; i < options / 2; i++) {
+      const firstOption = {
+        id: 2 * i,
+        colorId: i,
+        color: colors[i],
+        flipped: false,
+      };
+      const secondOption = {
+        id: 2 * i + 1,
+        colorId: i,
+        color: colors[i],
+        flipped: false,
+      };
+
+      newGame.push(firstOption);
+      newGame.push(secondOption);
+    }
+
+    const shuffledGame = newGame.sort(() => Math.random() - 0.5);
+    setGame(shuffledGame);
+  }, []);
+
+  //Section that shows high score. Maybe change later as is a little confusing
+  useEffect(() => {
+    const finished = !game.some((card) => !card.flipped);
+    if (finished && game.length > 0) {
+      setTimeout(() => {
+        const bestPossible = game.length;
+        let multiplier;
+
+        if (options === 12) {
+          multiplier = 5;
+        } else if (options === 18) {
+          multiplier = 2.5;
+        } else if (options === 24) {
+          multiplier = 1;
+        }
+
+        const pointsLost = multiplier * (0.66 * flippedCount - bestPossible);
+
+        let score;
+        if (pointsLost < 100) {
+          score = 100 - pointsLost;
+        } else {
+          score = 0;
+        }
+
+        if (score > highScore) {
+          setHighScore(score);
+          const json = JSON.stringify(score);
+          localStorage.setItem("memorygamehighscore", json);
+        }
+        //was getting error "Unexpected use of 'confirm' no-restricted-globals". Just needed to add "window."below
+        const newGame = window.confirm(
+          "You Win!, SCORE: " + score + " New Game?"
+        );
+        if (newGame) {
+          const gameLength = game.length;
+          setOptions(null);
+          setTimeout(() => {
+            setOptions(gameLength);
+          }, 5);
+        } else {
+          setOptions(null);
+        }
+      }, 500);
+    }
+  }, [game]);
+
+  // Runs if two cards have been flipped
+  if (flippedIndexes.length === 2) {
+    const match =
+      game[flippedIndexes[0]].colorId === game[flippedIndexes[1]].colorId;
+
+    if (match) {
+      const newGame = [...game];
+      newGame[flippedIndexes[0]].flipped = true;
+      newGame[flippedIndexes[1]].flipped = true;
+      setGame(newGame);
+
+      const newIndexes = [...flippedIndexes];
+      newIndexes.push(false);
+      setFlippedIndexes(newIndexes);
+    } else {
+      const newIndexes = [...flippedIndexes];
+      newIndexes.push(true);
+      setFlippedIndexes(newIndexes);
+    }
+  }
+
+  if (game.length === 0) return <div>loading...</div>;
+  else {
+    return (
+      <div id="cards">
+        {game.map((card, index) => (
+          <div className="card" key={index}>
+            <Card
+              id={index}
+              color={card.color}
+              game={game}
+              flippedCount={flippedCount}
+              setFlippedCount={setFlippedCount}
+              flippedIndexes={flippedIndexes}
+              setFlippedIndexes={setFlippedIndexes}
+            />
+          </div>
+        ))}
+      </div>
+    );
+  }
+}
+
+//Card setup. should be in a separate file eventually
+function Card({
+  id,
+  color,
+  game,
+  flippedCount,
+  setFlippedCount,
+  flippedIndexes,
+  setFlippedIndexes,
+}) {
+  const [flipped, set] = useState(false);
+  const { transform, opacity } = useSpring({
+    opacity: flipped ? 1 : 0,
+    transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
+    config: { mass: 5, tension: 500, friction: 80 },
+  });
+
+  //Set timer, then flip the cards back
+  useEffect(() => {
+    if (flippedIndexes[2] === true && flippedIndexes.indexOf(id) > -1) {
+      setTimeout(() => {
+        set((state) => !state);
+        setFlippedCount(flippedCount + 1);
+        setFlippedIndexes([]);
+      }, 1000);
+    } else if (flippedIndexes[2] === false && id === 0) {
+      setFlippedCount(flippedCount + 1);
+      setFlippedIndexes([]);
+    }
+  }, [flippedIndexes]);
+
+  const onCardClick = () => {
+    if (!game[id].flipped && flippedCount % 3 === 0) {
+      set((state) => !state);
+      setFlippedCount(flippedCount + 1);
+      const newIndexes = [...flippedIndexes];
+      newIndexes.push(id);
+      setFlippedIndexes(newIndexes);
+    } else if (
+      flippedCount % 3 === 1 &&
+      !game[id].flipped &&
+      flippedIndexes.indexOf(id) < 0
+    ) {
+      set((state) => !state);
+      setFlippedCount(flippedCount + 1);
+      const newIndexes = [...flippedIndexes];
+      newIndexes.push(id);
+      setFlippedIndexes(newIndexes);
+    }
+  };
+
+  return (
+    <div onClick={onCardClick}>
+      <a.div
+        className="c back"
+        style={{
+          opacity: opacity.interpolate((o) => 1 - o),
+          transform,
+        }}
+      />
+      <a.div
+        className="c front"
+        style={{
+          opacity,
+          transform: transform.interpolate((t) => `${t} rotateX(180deg)`),
+          background: color,
+        }}
+      />
+
+    </div>
+  );
+}
+
+//export default Game;

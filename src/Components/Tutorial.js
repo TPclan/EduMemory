@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../icons/EduLogo.ico";
+import logo from "../icons/brain-2.svg";
 
 const Tutorial = () => {
   return (

@@ -2,6 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import Fade from "./Components/transition1";
+
+// Call Highway.Core once. Doesn't work nicely with React
+// const H = new Highway.Core({
+//   transitions: {
+//     default: Fade,
+//   },
+// });
 
 ReactDOM.render(
   <React.StrictMode>
