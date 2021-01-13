@@ -1,8 +1,7 @@
-
-
 // import React from "react";
 import React, { useState, useEffect } from "react";
 import { useSpring, animated as a } from "react-spring";
+import HomeButton from "../img/home-button.svg";
 
 export default function Game({ setPageStatus, pageStatus }) {
   const [options, setOptions] = useState(null);
@@ -17,19 +16,22 @@ export default function Game({ setPageStatus, pageStatus }) {
     }
   }, []);
 
-
   return (
     <div className={`game ${pageStatus ? "active-game" : ""}`}>
-      <button className="home-button" onClick={() => setPageStatus(0)}>
-        Go Home
-      </button>
+      <div className="home-button">
+        <button onClick={() => setPageStatus(0)} class="homeButton">
+          <img className="homePic" src={HomeButton} alt="Home Button" />
+        </button>
+      </div>
       <h1>EduMemory</h1>
 
       <h2>Game</h2>
 
       <div className="container">
-        <h1>Memory Game</h1>
-        <div>High Score: {highScore}</div>
+        <h2>Memory Game</h2>
+        <div>
+          <h4>High Score: {highScore}</h4>
+        </div>
         <div>
           {options === null ? (
             <>
@@ -282,10 +284,8 @@ function Card({
           background: color,
         }}
       />
-
     </div>
   );
 }
 
 //export default Game;
-

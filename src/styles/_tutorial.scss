@@ -33,24 +33,25 @@
   }
 }
 .home-button {
-  button {
+  .homeButton {
     margin: 1rem;
     border: none;
     background-color: lightBlue;
-    height: 50px;
-    width: 50px;
+    height: 4rem;
+    width: 4rem;
     position: absolute;
     top: 0;
     right: 0;
     background: lightblue;
     outline: none;
+    padding: auto;
     cursor: pointer;
     & :hover {
       background: rgb(83, 147, 168);
-      border-radius: 5px;
+      border-radius: 2px;
     }
   }
-  img {
+  .homePic {
     margin: auto;
     width: 90%;
     border-radius: 20px;

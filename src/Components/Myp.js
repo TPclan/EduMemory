@@ -7,7 +7,7 @@ const Myp = ({ setPageStatus }) => {
     <div className="myp">
       <div className="home-button">
         <button onClick={() => setPageStatus(0)} class="homeButton">
-          <img src={HomeButton} alt="Home Button" />
+          <img className="homePic" src={HomeButton} alt="Home Button" />
         </button>
       </div>
       <h1>EduMemory</h1>
