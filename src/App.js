@@ -2,7 +2,7 @@ import React, { useState } from "react";
 //Adding Components
 import Home from "./Components/Home";
 import Game from "./Components/Game";
-import Myp from "./Components/Myp";
+import About from "./Components/About";
 import Tutorial from "./Components/Tutorial";
 //Import Styles
 import "./styles/app.scss";
@@ -27,7 +27,7 @@ function App() {
               );
             case 3:
               return (
-                <Myp pageStatus={pageStatus} setPageStatus={setPageStatus} />
+                <About pageStatus={pageStatus} setPageStatus={setPageStatus} />
               );
             default:
               return (
