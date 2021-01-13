@@ -1,9 +1,20 @@
 .game {
   min-height: 100vh;
-  display: inline-block;
-  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   background: lightblue;
+  h1 {
+    text-align: center;
+    display: block;
+    margin: 2rem;
+    font-family: "Caveat", cursive;
+    font-size: 3rem;
+  }
+  h2 {
+    margin: 1rem;
+  }
   img {
     width: 10%;
     border-radius: 20px;
@@ -13,22 +24,34 @@
 }
 
 .home-button {
-  background-color: rgb(64, 154, 184);
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 25px;
-  outline: none;
-  margin: 2rem;
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
-  &:hover {
-    background: rgb(47, 120, 144);
+  .homeButton {
+    margin: 1rem;
+    border: none;
+    background-color: lightBlue;
+    height: 4rem;
+    width: 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: lightblue;
+    outline: none;
+    padding: auto;
+    cursor: pointer;
+    & :hover {
+      background: rgb(83, 147, 168);
+      border-radius: 2px;
+    }
   }
+  .homePic {
+    margin: auto;
+    width: 90%;
+    border-radius: 20px;
+    border: none;
+  }
+}
+.main-body {
+  font-family: "Lato", sans-serif;
+  text-align: center;
 }
 
 //Temporary style. Will need to do this properly later
