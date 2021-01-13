@@ -8,7 +8,7 @@ Analyse methods to build our own improved version
 ## To Do - make pretty
 
 - [x] fix house logo and hover
-- [] make mobile friendly
+- [ ] make mobile friendly
 - replace card back with new back
 - move difficulty buttons to below the instructions
 - memory game in the middle and remove "game"
