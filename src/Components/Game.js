@@ -2,6 +2,18 @@
 import React, { useState, useEffect } from "react";
 import { useSpring, animated as a } from "react-spring";
 import HomeButton from "../img/home-button.svg";
+import Background1 from "../img/cartoon-animals/card-1.png";
+import Background13 from "../img/cartoon-animals/card-13.png";
+import Background3 from "../img/cartoon-animals/card-3.png";
+import Background4 from "../img/cartoon-animals/card-4.png";
+import Background5 from "../img/cartoon-animals/card-5.png";
+import Background6 from "../img/cartoon-animals/card-6.png";
+import Background7 from "../img/cartoon-animals/card-7.png";
+import Background8 from "../img/cartoon-animals/card-8.png";
+import Background9 from "../img/cartoon-animals/card-9.png";
+import Background10 from "../img/cartoon-animals/card-10.png";
+import Background11 from "../img/cartoon-animals/card-11.png";
+import Background12 from "../img/cartoon-animals/card-12.png";
 
 export default function Game({ setPageStatus, pageStatus }) {
   const [options, setOptions] = useState(null);
@@ -88,18 +100,18 @@ function MemoryGame({ options, setOptions, highScore, setHighScore }) {
   const [flippedIndexes, setFlippedIndexes] = useState([]);
 
   const colors = [
-    "#ecdb54",
-    "#e34132",
-    "#6ca0dc",
-    "#944743",
-    "#dbb2d1",
-    "#ec9787",
-    "#00a68c",
-    "#645394",
-    "#6c4f3d",
-    "#ebe1df",
-    "#bc6ca7",
-    "#bfd833",
+    `url(${Background1})`,
+    `url(${Background13})`,
+    `url(${Background3})`,
+    `url(${Background4})`,
+    `url(${Background5})`,
+    `url(${Background6})`,
+    `url(${Background7})`,
+    `url(${Background8})`,
+    `url(${Background9})`,
+    `url(${Background10})`,
+    `url(${Background11})`,
+    `url(${Background12})`,
   ];
 
   useEffect(() => {
@@ -281,7 +293,7 @@ function Card({
         style={{
           opacity,
           transform: transform.interpolate((t) => `${t} rotateX(180deg)`),
-          background: color,
+          backgroundImage: color,
         }}
       />
     </div>
