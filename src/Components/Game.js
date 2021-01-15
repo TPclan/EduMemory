@@ -11,7 +11,7 @@ import Background6 from "../img/cartoon-animals/card-6.png";
 import Background7 from "../img/cartoon-animals/card-7.png";
 import Background8 from "../img/cartoon-animals/card-8.png";
 import Background9 from "../img/cartoon-animals/card-9.png";
-import Background10 from "../img/cartoon-animals/card-10.png";
+import Background14 from "../img/cartoon-animals/card-14.png";
 import Background11 from "../img/cartoon-animals/card-11.png";
 import Background12 from "../img/cartoon-animals/card-12.png";
 
@@ -30,17 +30,16 @@ export default function Game({ setPageStatus, pageStatus }) {
 
   return (
     <div className={`game ${pageStatus ? "active-game" : ""}`}>
-      <div className="home-button">
+      <div className="home-button1">
         <button onClick={() => setPageStatus(0)} class="homeButton">
           <img className="homePic" src={HomeButton} alt="Home Button" />
         </button>
       </div>
       <h1>EduMemory</h1>
 
-      <h2>Game</h2>
+      <h2>Memory Game</h2>
 
       <div className="container">
-        <h2>Memory Game</h2>
         <div>
           <h4>High Score: {highScore}</h4>
         </div>
@@ -109,7 +108,7 @@ function MemoryGame({ options, setOptions, highScore, setHighScore }) {
     `url(${Background7})`,
     `url(${Background8})`,
     `url(${Background9})`,
-    `url(${Background10})`,
+    `url(${Background14})`,
     `url(${Background11})`,
     `url(${Background12})`,
   ];

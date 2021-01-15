@@ -6,7 +6,7 @@ import HomeButton from "../img/home-button.svg";
 const Tutorial = ({ setPageStatus }) => {
   return (
     <div className="tutorial">
-      <div className="home-button">
+      <div className="home-button1">
         <button onClick={() => setPageStatus(0)} class="homeButton">
           <img className="homePic" src={HomeButton} alt="Home Button" />
         </button>

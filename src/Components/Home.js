@@ -11,7 +11,7 @@ const Home = ({ setPageStatus, pageStatus }) => {
       </div>
       <button onClick={() => setPageStatus(1)}>Play</button>
       <button onClick={() => setPageStatus(2)}>How To Play</button>
-      <button onClick={() => setPageStatus(3)}>Tom's MYP</button>
+      <button onClick={() => setPageStatus(3)}>About</button>
     </div>
   );
 };
