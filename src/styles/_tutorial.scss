@@ -6,13 +6,7 @@
   align-items: center;
   justify-content: center;
   background: lightblue;
-  h1 {
-    text-align: center;
-    display: block;
-    margin: 2rem;
-    font-family: "Caveat", cursive;
-    font-size: 3rem;
-  }
+
   h2 {
     font-size: 1.8rem;
     padding-left: 2rem;
@@ -22,14 +16,6 @@
   p {
     font-size: 1.5rem;
     padding: 2rem;
-  }
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 6rem;
-    margin-top: 0rem;
-    margin-bottom: 2rem;
   }
 }
 .home-button1 {
@@ -61,4 +47,21 @@
 .main-body {
   font-family: "Lato", sans-serif;
   text-align: center;
+}
+.logo-title-div {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.logo-title {
+  font-family: "Caveat", cursive;
+  text-align: center;
+  font-size: 2rem;
+  margin: 1rem;
+}
+.brain-logo {
+  width: 9rem;
+  border-radius: 0px;
+  margin-top: 1rem;
 }
