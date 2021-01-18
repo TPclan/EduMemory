@@ -31,8 +31,8 @@ export default function Game({ setPageStatus, pageStatus }) {
 
   return (
     <div className={`game ${pageStatus ? "active-game" : ""}`}>
-      <div className="home-button1">
-        <button onClick={() => setPageStatus(0)} class="home-button">
+      <div>
+        <button onClick={() => setPageStatus(0)} className="home-button">
           <img className="home-pic" src={HomeButton} alt="Home Button" />
         </button>
       </div>

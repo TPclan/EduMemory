@@ -9,12 +9,13 @@ Analyse methods to build our own improved version
 
 ## To Do - make pretty
 
-- fix house logo and hover
+- [x] fix house logo and hover
 - make mobile friendly
 - [x] replace card back with new back
 - [x] move difficulty buttons to below the instructions
 - [x] memory game in the middle and remove "game"
-- move high score to the centre. Add high score explanation in the how to play
+- [x] move high score to the centre.
+- Add high score explanation in the how to play
 - reorganize cards so they fit in the window. PC and Mobile versions. might need if statement based on screen size.
 - [x] make all buttons in app look similar. colours and shapes + hover
 - [x] Edumemory logo. top left. add brain to logo

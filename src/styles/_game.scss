@@ -5,12 +5,10 @@
   flex-direction: column;
   justify-content: center;
   background: lightblue;
-
   h2 {
     margin: 1rem;
   }
 }
-
 .main-body {
   font-family: "Lato", sans-serif;
   text-align: center;
@@ -92,29 +90,25 @@ button:focus {
   border-radius: 20px;
 }
 
-.home-button1 {
-  .home-button {
-    margin: 1rem;
-    border: none;
-    height: 4rem;
-    width: 4rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: lightblue;
-    outline: none;
-    padding: auto;
-    cursor: pointer;
-    & :hover {
-      background: rgb(83, 147, 168);
-    }
-  }
-  .home-pic {
-    margin: auto;
-    width: 90%;
-    border: none;
+.home-button {
+  margin: 1rem;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: lightblue;
+  outline: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  & :hover {
+    background: rgb(47, 120, 144);
   }
 }
+.home-pic {
+  border: none;
+  width: 2.5rem;
+}
+
 .logo-title-div {
   display: flex;
   position: absolute;
