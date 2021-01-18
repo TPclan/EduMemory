@@ -34,6 +34,9 @@ Analyse methods to build our own improved version
 - display the number of turns.
 - add a timer and display
 - add "Attempts" or turns. flippedcount is in the code already.
+- timer count down. race against the clock
+- change images based on difficulty
+- load images dynamically. refactor code.
 
 ## To do - content
 
@@ -59,3 +62,4 @@ Analyse methods to build our own improved version
 - add multiple high scores
 - with high score add your name
 - choose your card deck or make your own.
+- add a small form so people canget updates on new versions. Add email, name and comments to Hasura. send auto email after. Could add phone for a text message.
