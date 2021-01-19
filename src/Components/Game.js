@@ -11,9 +11,10 @@ import Background6 from "../img/cartoon-animals/card-6.png";
 import Background7 from "../img/cartoon-animals/card-7.png";
 import Background8 from "../img/cartoon-animals/card-8.png";
 import Background9 from "../img/cartoon-animals/card-9.png";
-import Background10 from "../img/cartoon-animals/card-10.png";
+import Background14 from "../img/cartoon-animals/card-14.png";
 import Background11 from "../img/cartoon-animals/card-11.png";
 import Background12 from "../img/cartoon-animals/card-12.png";
+import logo from "../icons/brain-2.svg";
 
 export default function Game({ setPageStatus, pageStatus }) {
   const [options, setOptions] = useState(null);
@@ -30,50 +31,39 @@ export default function Game({ setPageStatus, pageStatus }) {
 
   return (
     <div className={`game ${pageStatus ? "active-game" : ""}`}>
-      <div className="home-button">
-        <button onClick={() => setPageStatus(0)} class="homeButton">
-          <img className="homePic" src={HomeButton} alt="Home Button" />
+      <div>
+        <button onClick={() => setPageStatus(0)} className="home-button">
+          <img className="home-pic" src={HomeButton} alt="Home Button" />
         </button>
       </div>
-      <h1>EduMemory</h1>
+      <div className="logo-title-div">
+        <h1 className="logo-title">EduMemory</h1>
+        <img className="brain-logo" alt="EduMemory logo" src={logo}></img>
+      </div>
 
-      <h2>Game</h2>
+      <h2>Memory Game</h2>
 
       <div className="container">
-        <h2>Memory Game</h2>
         <div>
           <h4>High Score: {highScore}</h4>
         </div>
         <div>
           {options === null ? (
+            <h2>Choose a difficulty below to begin!</h2>
+          ) : (
+            <h2></h2>
+          )}
+        </div>
+        <div>
+          {options === null ? (
             <>
-              <button className="home-button" onClick={() => setOptions(12)}>
-                Easy
-              </button>
-              <button className="home-button" onClick={() => setOptions(18)}>
-                Medium
-              </button>
-              <button className="home-button" onClick={() => setOptions(24)}>
-                Hard
-              </button>
+              <button onClick={() => setOptions(12)}>Easy</button>
+              <button onClick={() => setOptions(18)}>Medium</button>
+              <button onClick={() => setOptions(24)}>Hard</button>
             </>
           ) : (
             <>
-              <button
-                className="home-button"
-                onClick={() => {
-                  const prevOptions = options;
-                  setOptions(null);
-                  setTimeout(() => {
-                    setOptions(prevOptions);
-                  }, 5);
-                }}
-              >
-                Start Over
-              </button>
-              <button className="home-button" onClick={() => setOptions(null)}>
-                Main Menu
-              </button>
+              <button onClick={() => setOptions(null)}>Restart</button>
             </>
           )}
         </div>
@@ -87,7 +77,7 @@ export default function Game({ setPageStatus, pageStatus }) {
           setHighScore={setHighScore}
         />
       ) : (
-        <h2>Choose a difficulty to begin!</h2>
+        <h2></h2>
       )}
     </div>
   );
@@ -109,7 +99,7 @@ function MemoryGame({ options, setOptions, highScore, setHighScore }) {
     `url(${Background7})`,
     `url(${Background8})`,
     `url(${Background9})`,
-    `url(${Background10})`,
+    `url(${Background14})`,
     `url(${Background11})`,
     `url(${Background12})`,
   ];
