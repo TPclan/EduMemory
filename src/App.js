@@ -6,6 +6,7 @@ import About from "./Components/About";
 import Tutorial from "./Components/Tutorial";
 //Import Styles
 import "./styles/app.scss";
+import { motion, AnimatePresence } from "framer-motion";
 
 function App() {
   const [pageStatus, setPageStatus] = useState(0);
@@ -16,7 +17,20 @@ function App() {
           switch (pageStatus) {
             case 1:
               return (
-                <Game pageStatus={pageStatus} setPageStatus={setPageStatus} />
+                <div>
+                  <AnimatePresence exitBeforeEnter>
+                    <motion.div
+                      exit={{ opacity: 0 }}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                    >
+                      <Game
+                        pageStatus={pageStatus}
+                        setPageStatus={setPageStatus}
+                      />
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
               );
             case 2:
               return (
