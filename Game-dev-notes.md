@@ -46,7 +46,7 @@ Analyse methods to build our own improved version
 
 ## Bug fixes
 
-- get out of sync sometimes when you click too fast before it has time to reset. Can lead to odd cards staying up.
+- the game gets out of sync sometimes when you turn 2 cards too fast before it has time to reset. Can lead to odd cards staying up.
 
 ## To do - go live
 
