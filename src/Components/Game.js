@@ -147,6 +147,7 @@ function MemoryGame({ options, setOptions, highScore, setHighScore }) {
         const pointsLost = Math.round(
           multiplier * (0.66 * flippedCount - bestPossible)
         );
+
         let score;
         if (pointsLost < 100) {
           score = 100 - pointsLost;
