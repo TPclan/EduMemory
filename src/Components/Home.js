@@ -7,7 +7,7 @@ const Home = ({ setPageStatus, pageStatus }) => {
     <div className="home">
       <div className="head">
         <h1>EduMemory</h1>
-        <img alt="EduMemory logo" src={logo}></img>
+        <img className="brain-img" alt="EduMemory logo" src={logo}></img>
       </div>
       <button onClick={() => setPageStatus(1)}>Play</button>
       <button onClick={() => setPageStatus(2)}>How To Play</button>

@@ -6,13 +6,15 @@ import HomeButton from "../img/home-button.svg";
 const Tutorial = ({ setPageStatus }) => {
   return (
     <div className="tutorial">
-      <div className="home-button">
-        <button onClick={() => setPageStatus(0)} class="homeButton">
-          <img className="homePic" src={HomeButton} alt="Home Button" />
+      <div>
+        <button onClick={() => setPageStatus(0)} className="home-button">
+          <img className="home-pic" src={HomeButton} alt="Home Button" />
         </button>
       </div>
-      <h1>EduMemory</h1>
-      <img alt="EduMemory logo" src={logo}></img>
+      <div className="logo-title-div">
+        <h1 className="logo-title">EduMemory</h1>
+        <img className="brain-logo" alt="EduMemory logo" src={logo}></img>
+      </div>
       <div className="main-body">
         <h2>How do you play?</h2>
         <p>
