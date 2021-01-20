@@ -25,6 +25,7 @@ Analyse methods to build our own improved version
 
 ## To do - Functionality
 
+
 - [x] add individual pictures in exchange for the colours. Tom
 - [x] change high score to integer
 - when game is finished, no popup window. Insert high score and add text in page, like "you win". Possibly learn how to make a lightbox/modular window.
