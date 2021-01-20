@@ -17,20 +17,18 @@ function App() {
           switch (pageStatus) {
             case 1:
               return (
-                <div>
-                  <AnimatePresence exitBeforeEnter>
-                    <motion.div
-                      exit={{ opacity: 0 }}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                    >
-                      <Game
-                        pageStatus={pageStatus}
-                        setPageStatus={setPageStatus}
-                      />
-                    </motion.div>
-                  </AnimatePresence>
-                </div>
+                <AnimatePresence exitBeforeEnter>
+                  <motion.div
+                    exit={{ opacity: 0 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                  >
+                    <Game
+                      pageStatus={pageStatus}
+                      setPageStatus={setPageStatus}
+                    />
+                  </motion.div>
+                </AnimatePresence>
               );
             case 2:
               return (
