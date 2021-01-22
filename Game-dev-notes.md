@@ -15,12 +15,11 @@ Analyse methods to build our own improved version
 - [x] move difficulty buttons to below the instructions
 - [x] memory game in the middle and remove "game"
 - [x] move high score to the centre.
-- Add high score explanation in the how to play
+- [x] Add high score explanation in the how to play
 - reorganize cards so they fit in the window. PC and Mobile versions. might need if statement based on screen size.
 - [x] make all buttons in app look similar. colours and shapes + hover
 - [x] Edumemory logo. top left. add brain to logo
-- page transitions
-- card animation. change to gsap.
+- [x] page transitions
 - hover effect over cards. maybe with shadow.
 
 ## To do - Functionality
@@ -32,7 +31,6 @@ Analyse methods to build our own improved version
 - store data so if we refresh page it saves state of the game
 - when there is a match add a message like "Congrats! keep going". Possibly add a sound.
 - change card time once chosen your 2 cards from 1 second to 2
-- display the number of turns.
 - add a timer and display
 - add "Attempts" or turns. flippedcount is in the code already.
 - timer count down. race against the clock
