@@ -25,7 +25,6 @@ Analyse methods to build our own improved version
 
 ## To do - Functionality
 
-
 - [x] add individual pictures in exchange for the colours. Tom
 - [x] change high score to integer
 - when game is finished, no popup window. Insert high score and add text in page, like "you win". Possibly learn how to make a lightbox/modular window.
@@ -47,7 +46,7 @@ Analyse methods to build our own improved version
 
 ## Bug fixes
 
-- get out of sync sometimes when you click too fast before it has time to reset. Can lead to odd cards staying up.
+- the game gets out of sync sometimes when you turn 2 cards too fast before it has time to reset. Can lead to odd cards staying up.
 
 ## To do - go live
 

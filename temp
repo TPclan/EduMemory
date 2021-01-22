@@ -228,3 +228,8 @@ hasura migrate create "init" --from-server --admin-secret=dG45WRRV93d0toXj4^n1OG
 HASURA_GRAPHQL_ADMIN_SECRET=dG45WRRV93d0toXj4^n1OG3!UD*Q37sWj
 I am getting an error now "bash: !UD: event not found". Bad syntax on my part? Here is my line
 ```hasura migrate create "init" --from-server --admin-secret=1234```
+
+
+git remote add upstream https://github.com/TPclan/EduMemory.git
+
+TPclan/EduMemory
