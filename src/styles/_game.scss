@@ -5,16 +5,10 @@
   flex-direction: column;
   justify-content: center;
   background: lightblue;
-  h1 {
-    text-align: center;
-    display: block;
-    margin: 2rem;
-    font-family: "Caveat", cursive;
-    font-size: 3rem;
-  }
   h2 {
     margin: 1rem;
   }
+<<<<<<< HEAD
   img {
     width: 10%;
     border-radius: 20px;
@@ -48,6 +42,8 @@
     border-radius: 20px;
     border: none;
   }
+=======
+>>>>>>> e318855ea0002bef5301c4da68a528178a2cdeb6
 }
 .main-body {
   font-family: "Lato", sans-serif;
@@ -128,4 +124,46 @@ button:focus {
 .front {
   border: 5px solid rgb(58, 138, 165);
   border-radius: 20px;
+}
+
+.home-button {
+  margin: 1rem;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: lightblue;
+  outline: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  & :hover {
+    background: rgb(47, 120, 144);
+  }
+}
+.home-pic {
+  border: none;
+  width: 2.5rem;
+}
+
+.logo-title-div {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.logo-title {
+  font-family: "Caveat", cursive;
+  text-align: center;
+  font-size: 2rem;
+  margin: 1rem;
+}
+.brain-logo {
+  width: 3rem;
+  border-radius: 0px;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .game {
+  }
 }

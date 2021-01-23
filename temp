@@ -1,13 +1,235 @@
-{"lead":{"first_name": "{{11.`centah-response`.lead[].customer[].`first-name`[]}}","last_name": "{{11.`centah-response`.lead[].customer[].`last-name`[]}}",
-"lead_source_id":"4000209435",
-"lead_stage_id":"4000092176",
-"work_number": "{{11.`centah-response`.lead[].customer[].`primary-phone`[].phone[]}}","email": "{{11.`centah-response`.lead[].customer[].email[]}}","address": "{{11.`centah-response`.lead[].customer[].address[].`street-number`[]}} {{11.`centah-response`.lead[].customer[].address[].street[]}}","city": "{{11.`centah-response`.lead[].customer[].address[].city[]}}",
-    "zipcode": "{{11.`centah-response`.lead[].customer[].address[].`postal-code`[]}}"
-,"custom_field": {"cf_centahid": 
-{{11.`centah-response`.lead[].id[]}}
-,"cf_costco_warehouse":{{switch(11.`centah-response`.lead[].store[].no[]; 255; """255 Port Coquitlam"""; 163; """163 Abbotsford"""; 552; """552 Vancouver"""; 55; """55 Surrey"""; 259; """259 Langley"""; 51; """51 Burnaby (Brighton ave)"""; 548; """548 Burnaby (Willingdon)"""; 54; """54 Richmond"""; """other""")}},"cf_quote_type":"Costco","cf_centah_notes": {{62.value}}}
-}}
+{
+  "version": 2,
+  "tables": [
+    {
+      "table": {
+        "schema": "fb1",
+        "name": "test_table_via_hasura"
+      }
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "online_users"
+      },
+      "object_relationships": [
+        {
+          "name": "user",
+          "using": {
+            "manual_configuration": {
+              "remote_table": {
+                "schema": "public",
+                "name": "t_user"
+              },
+              "column_mapping": {
+                "id": "id"
+              }
+            }
+          }
+        }
+      ],
+      "select_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "columns": [
+              "id",
+              "last_seen"
+            ],
+            "filter": {}
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "t_todo"
+      },
+      "object_relationships": [
+        {
+          "name": "t_user",
+          "using": {
+            "foreign_key_constraint_on": "user_id"
+          }
+        }
+      ],
+      "insert_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "check": {
+              "user_id": {
+                "_eq": "X-Hasura-User-Id"
+              }
+            },
+            "set": {
+              "user_id": "x-hasura-X-HASURA-USER-ID"
+            },
+            "columns": [
+              "is_public",
+              "title"
+            ],
+            "backend_only": false
+          }
+        }
+      ],
+      "select_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "columns": [
+              "is_completed",
+              "is_public",
+              "id",
+              "title",
+              "user_id",
+              "created_at"
+            ],
+            "filter": {
+              "_or": [
+                {
+                  "is_public": {
+                    "_eq": true
+                  }
+                },
+                {
+                  "user_id": {
+                    "_eq": "X-Hasura-User-Id"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "update_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "columns": [
+              "is_completed"
+            ],
+            "filter": {
+              "user_id": {
+                "_eq": "X-Hasura-User-Id"
+              }
+            },
+            "check": null
+          }
+        }
+      ],
+      "delete_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "filter": {
+              "user_id": {
+                "_eq": "X-Hasura-User-Id"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "t_user"
+      },
+      "select_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "columns": [],
+            "filter": {}
+          }
+        }
+      ],
+      "update_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "columns": [
+              "last_seen",
+              "name"
+            ],
+            "filter": {
+              "id": {
+                "_eq": "X-Hasura-User-Id"
+              }
+            },
+            "check": null
+          }
+        }
+      ],
+      "event_triggers": [
+        {
+          "name": "new_user",
+          "definition": {
+            "enable_manual": false,
+            "insert": {
+              "columns": "*"
+            }
+          },
+          "retry_conf": {
+            "num_retries": 0,
+            "interval_sec": 10,
+            "timeout_sec": 60
+          },
+          "webhook": "https://hook.integromat.com/uk4qaa2up4o31hex2t5nj3ai8yq5gl3b"
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "testtable"
+      }
+    }
+  ],
+  "custom_types": {
+    "objects": [
+      {
+        "name": "auth0_profile",
+        "fields": [
+          {
+            "name": "id",
+            "type": "String"
+          },
+          {
+            "name": "email",
+            "type": "String"
+          },
+          {
+            "name": "picture",
+            "type": "String"
+          }
+        ]
+      }
+    ]
+  }
+}
 
-https://lasting-grub-95.hasura.app/v1/graphql
 
-{"query":"mutation MyMutation {\r\n  insert_t_user(objects: {id: \"12\", name: \"Cal\"}) {\r\n    affected_rows\r\n  }\r\n}","variables":{}}
+hasura init my-fb1-hasura-project --endpoint https://lasting-grub-95.hasura.app
+
+Hi all, 
+I am in the cli trying to Sett up Hasura migrations and am getting this error. How can I either add the jwt header or bypass it?
+```
+$ hasura migrate create "init" --from-server
+time="2021-01-13T13:33:30-08:00" level=fatal msg="cannot create migrate instance: cannot create migrate instance: [invalid-headers] Missing Authorization header in JWT authentication mode ($)"```
+
+use --admin-secret https://hasura.io/docs/1.0/graphql/core/hasura-cli/hasura_console.html#options when you run init
+hasura console --admin-secret=dG45WRRV93d0toXj4^n1OG3!UD*Q37sWj
+dG45WRRV93d0toXj4^n1OG3!UD*Q37sWj
+hasura migrate create "init" --from-server --admin-secret=dG45WRRV93d0toXj4^n1OG3!UD*Q37sWj
+
+HASURA_GRAPHQL_ADMIN_SECRET=dG45WRRV93d0toXj4^n1OG3!UD*Q37sWj
+I am getting an error now "bash: !UD: event not found". Bad syntax on my part? Here is my line
+```hasura migrate create "init" --from-server --admin-secret=1234```
+
+
+git remote add upstream https://github.com/TPclan/EduMemory.git
+
+TPclan/EduMemory

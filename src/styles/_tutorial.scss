@@ -6,13 +6,7 @@
   align-items: center;
   justify-content: center;
   background: lightblue;
-  h1 {
-    text-align: center;
-    display: block;
-    margin: 2rem;
-    font-family: "Caveat", cursive;
-    font-size: 3rem;
-  }
+
   h2 {
     font-size: 1.8rem;
     padding-left: 2rem;
@@ -23,15 +17,8 @@
     font-size: 1.5rem;
     padding: 2rem;
   }
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 6rem;
-    margin-top: 0rem;
-    margin-bottom: 2rem;
-  }
 }
+<<<<<<< HEAD
 .home-button1 {
   .homeButton {
     margin: 1rem;
@@ -56,9 +43,46 @@
     width: 90%;
     border-radius: 20px;
     border: none;
+=======
+
+.home-button {
+  margin: 1rem;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: lightblue;
+  outline: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  & :hover {
+    background: rgb(47, 120, 144);
+>>>>>>> e318855ea0002bef5301c4da68a528178a2cdeb6
   }
 }
+.home-pic {
+  border: none;
+  width: 2.5rem;
+}
+
 .main-body {
   font-family: "Lato", sans-serif;
   text-align: center;
+}
+.logo-title-div {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.logo-title {
+  font-family: "Caveat", cursive;
+  text-align: center;
+  font-size: 2rem;
+  margin: 1rem;
+}
+.brain-logo {
+  width: 9rem;
+  border-radius: 0px;
+  margin-top: 1rem;
 }
