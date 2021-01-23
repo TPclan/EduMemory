@@ -15,8 +15,8 @@ Analyse methods to build our own improved version
 - move difficulty buttons to below the instructions
 - memory game in the middle and remove "game"
 - move high score to the left. Add high score explanation in the how to play
-- reorganize cards so they fit in the window. PC and Mobile versions. might need if statement based on screen size.
-- make all buttons in app look similar. colours and shapes + hover
+- anize cards so they fit in the window. PC and Mobile versions. might need if statement based on screen size.
+- [x] make all buttons in app look similar. colours and shapes + hover
 - Edumemory logo. top left. add brain to logo
 - page transitions
 - card animation. change to gsap.
