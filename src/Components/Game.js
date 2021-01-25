@@ -16,7 +16,7 @@ import Background11 from "../img/cartoon-animals/card-11.png";
 import Background12 from "../img/cartoon-animals/card-12.png";
 import logo from "../icons/brain-2.svg";
 
-export default function Game({ setPageStatus, pageStatus }) {
+export default function Game({ setPageStatus, pageStatus, flippedCount }) {
   const [options, setOptions] = useState(null);
   const [highScore, setHighScore] = useState(0);
 
