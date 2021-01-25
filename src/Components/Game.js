@@ -51,7 +51,7 @@ export default function Game({ setPageStatus, pageStatus }) {
           {options === null ? (
             <h2>Choose a difficulty below to begin!</h2>
           ) : (
-            <h2>Turns: </h2>
+            <h2>Turns: {flippedCount}</h2>
           )}
         </div>
         <div>
