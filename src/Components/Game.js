@@ -16,8 +16,8 @@ import Background11 from "../img/cartoon-animals/card-11.png";
 import Background12 from "../img/cartoon-animals/card-12.png";
 import logo from "../icons/brain-2.svg";
 
-export default function Game({ setPageStatus, pageStatus, flippedCount }) {
-  const [options, setOptions] = useState(null);
+export default funexport default function Game({ setPageStatus, pageStatus, flippedCount }) {
+tions] = useState(null);
   const [highScore, setHighScore] = useState(0);
 
   //This will check to see if new score is high score
@@ -51,7 +51,7 @@ export default function Game({ setPageStatus, pageStatus, flippedCount }) {
           {options === null ? (
             <h2>Choose a difficulty below to begin!</h2>
           ) : (
-            <h2>Turns: {flippedCount}</h2>
+            <h2>Turns: {f{f{flippedCount}>
           )}
         </div>
         <div>
@@ -77,7 +77,7 @@ export default function Game({ setPageStatus, pageStatus, flippedCount }) {
           setHighScore={setHighScore}
         />
       ) : (
-        <h2></h2>
+        <></ h2>
       )}
     </div>
   );
