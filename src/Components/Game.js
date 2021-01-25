@@ -77,7 +77,7 @@ tions] = useState(null);
           setHighScore={setHighScore}
         />
       ) : (
-        <></ h2>
+        <h2></h2>
       )}
     </div>
   );
