@@ -30,9 +30,8 @@ Analyse methods to build our own improved version
 - store data so if we refresh page it saves state of the game
 - when there is a match add a message like "Congrats! keep going". Possibly add a sound.
 - [x] change card time once chosen your 2 cards from 1 second to 2
-- add a timer and display
+- add a timer and display with record time
 - add "Attempts" or turns. flippedcount is in the code already.
-- timer count down. race against the clock
 - change images based on difficulty
 - load images dynamically. refactor code.
 
