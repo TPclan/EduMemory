@@ -34,14 +34,33 @@ function App() {
               );
             case 2:
               return (
-                <Tutorial
-                  pageStatus={pageStatus}
-                  setPageStatus={setPageStatus}
-                />
+                <AnimatePresence exitBeforeEnter>
+                  <motion.div
+                    exit={{ opacity: 0 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                  >
+                    <Tutorial
+                      pageStatus={pageStatus}
+                      setPageStatus={setPageStatus}
+                    />
+                  </motion.div>
+                </AnimatePresence>
               );
             case 3:
               return (
-                <About pageStatus={pageStatus} setPageStatus={setPageStatus} />
+                <AnimatePresence exitBeforeEnter>
+                  <motion.div
+                    exit={{ opacity: 0 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                  >
+                    <About
+                      pageStatus={pageStatus}
+                      setPageStatus={setPageStatus}
+                    />
+                  </motion.div>
+                </AnimatePresence>
               );
             default:
               return (

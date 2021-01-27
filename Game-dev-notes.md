@@ -10,18 +10,18 @@ Analyse methods to build our own improved version
 ## To Do - make pretty
 
 - [x] fix house logo and hover
-- make mobile friendly
+- make mobile friendly, reorganize cards so they fit in the window. PC and Mobile versions. might need if statement based on screen size.
 - [x] replace card back with new back
 - [x] move difficulty buttons to below the instructions
 - [x] memory game in the middle and remove "game"
 - [x] move high score to the centre.
-- Add high score explanation in the how to play
-- reorganize cards so they fit in the window. PC and Mobile versions. might need if statement based on screen size.
+- [x] Add high score explanation in the how to play
 - [x] make all buttons in app look similar. colours and shapes + hover
 - [x] Edumemory logo. top left. add brain to logo
 - [x] page transitions
 - card animation. change to gsap.
-- hover effect over cards. maybe with shadow.
+- [x] hover effect over cards. maybe with shadow.
+
 
 ## To do - Functionality
 
@@ -31,22 +31,21 @@ Analyse methods to build our own improved version
 - [x] remove "start over" button (see functionality behind it and either delete or use for something else)
 - store data so if we refresh page it saves state of the game
 - when there is a match add a message like "Congrats! keep going". Possibly add a sound.
-- change card time once chosen your 2 cards from 1 second to 2
-- display the number of turns.
-- add a timer and display
+- [x] change card time once chosen your 2 cards from 1 second to 2
+- add a timer and display with record time
 - add "Attempts" or turns. flippedcount is in the code already.
-- timer count down. race against the clock
 - change images based on difficulty
 - load images dynamically. refactor code.
 
 ## To do - content
 
 - replace Tom's MYP with "about the app" and add credits
-- add "pick two" once game starts
+- [x] add "pick two" once game starts
 
 ## Bug fixes
 
 - the game gets out of sync sometimes when you turn 2 cards too fast before it has time to reset. Can lead to odd cards staying up.
+- Hover effect on cards stays while card is doing animation (either remove hover effect while animation is happening, or mak ethe hover effect do the animation with the card)
 
 ## To do - go live
 
@@ -60,7 +59,7 @@ Analyse methods to build our own improved version
 - when click on start game more messages and animation
   - show message "here are the cards". Shuffling in 3, 2, 1. Countdown. so show cards face up
   - show animation of cards being shuffle with message "cards shuffling"
-  - then place cards face down with message "play"
+  - then place cards face down with message "pic 2 cards"
 - add login
 - record data in remote db
 - add multiple high scores
