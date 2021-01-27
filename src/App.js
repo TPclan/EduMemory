@@ -7,9 +7,11 @@ import Tutorial from "./Components/Tutorial";
 //Import Styles
 import "./styles/app.scss";
 import { motion, AnimatePresence } from "framer-motion";
+import useWindowSize from "./useWindowSize";
 
 function App() {
   const [pageStatus, setPageStatus] = useState(0);
+  const windowSize = useWindowSize();
   return (
     <div className="App">
       <section>

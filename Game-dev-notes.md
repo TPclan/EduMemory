@@ -19,7 +19,9 @@ Analyse methods to build our own improved version
 - [x] make all buttons in app look similar. colours and shapes + hover
 - [x] Edumemory logo. top left. add brain to logo
 - [x] page transitions
+- card animation. change to gsap.
 - [x] hover effect over cards. maybe with shadow.
+
 
 ## To do - Functionality
 
@@ -47,6 +49,9 @@ Analyse methods to build our own improved version
 
 ## To do - go live
 
+- Use stackblitz.com to test live.
+- To add a repo add like this https://stackblitz.com/github/virtualbis/EduMemory
+  - see image errors here https://stackblitz.com/edit/github-b45rws-a8u3yq?file=src/Components/Game.js
 - need to figure out how to do this. probably need a host
 
 ## To do - if we have time
