@@ -15,8 +15,9 @@ import Background14 from "../img/cartoon-animals/card-14.png";
 import Background11 from "../img/cartoon-animals/card-11.png";
 import Background12 from "../img/cartoon-animals/card-12.png";
 import logo from "../icons/brain-2.svg";
+import { useTapGesture } from "framer-motion";
 
-export default function Game({ setPageStatus, pageStatus }) {
+function Game({ setPageStatus, pageStatus, flippedCount }) {
   const [options, setOptions] = useState(null);
   const [highScore, setHighScore] = useState(0);
 
@@ -51,7 +52,7 @@ export default function Game({ setPageStatus, pageStatus }) {
           {options === null ? (
             <h2>Choose a difficulty below to begin!</h2>
           ) : (
-            <h2></h2>
+            <h2>Pick 2 cards!</h2>
           )}
         </div>
         <div>
@@ -77,7 +78,7 @@ export default function Game({ setPageStatus, pageStatus }) {
           setHighScore={setHighScore}
         />
       ) : (
-        <h2></h2>
+        <h2> </h2>
       )}
     </div>
   );
@@ -244,7 +245,7 @@ function Card({
         set((state) => !state);
         setFlippedCount(flippedCount + 1);
         setFlippedIndexes([]);
-      }, 1000);
+      }, 2300);
     } else if (flippedIndexes[2] === false && id === 0) {
       setFlippedCount(flippedCount + 1);
       setFlippedIndexes([]);
@@ -272,7 +273,7 @@ function Card({
   };
 
   return (
-    <div onClick={onCardClick}>
+    <div className="hovernow" onClick={onCardClick}>
       <a.div
         className="c back"
         style={{
@@ -292,4 +293,4 @@ function Card({
   );
 }
 
-//export default Game;
+export default Game;
