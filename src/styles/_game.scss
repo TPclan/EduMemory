@@ -145,6 +145,19 @@ button:focus {
 .hovernow:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 }
+.timer {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 13rem;
+  padding-right: 10rem;
+}
+.CountUp1 {
+  font-size: 1.6rem;
+  font-weight: 540;
+}
 
 @media screen and (max-width: 768px) {
   .game {

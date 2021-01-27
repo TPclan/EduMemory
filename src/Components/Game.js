@@ -16,6 +16,7 @@ import Background11 from "../img/cartoon-animals/card-11.png";
 import Background12 from "../img/cartoon-animals/card-12.png";
 import logo from "../icons/brain-2.svg";
 import { useTapGesture } from "framer-motion";
+import CountUp from "react-countup";
 
 function Game({ setPageStatus, pageStatus, flippedCount }) {
   const [options, setOptions] = useState(null);
@@ -54,6 +55,14 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
           ) : (
             <h2>Pick 2 cards!</h2>
           )}
+          {options === null ? (
+            <h6> </h6>
+          ) : (
+            <div className="timer">
+              <h2>Time:</h2>
+              <CountUp className="CountUp1" end={2000} duration={20000} />
+            </div>
+          )}
         </div>
         <div>
           {options === null ? (
@@ -78,7 +87,7 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
           setHighScore={setHighScore}
         />
       ) : (
-        <h2></h2>
+        <h2> </h2>
       )}
     </div>
   );
