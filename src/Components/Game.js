@@ -78,7 +78,7 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
           setHighScore={setHighScore}
         />
       ) : (
-        <h2> </h2>
+        <h2></h2>
       )}
     </div>
   );
