@@ -1,10 +1,11 @@
+@import "./_variables";
+@import "./_home";
+@import "./_about";
+@import "./_tutorial";
+@import "./_game";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-@import "./home";
-@import "./about";
-@import "./tutorial";
-@import "./game";
