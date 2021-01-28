@@ -10,3 +10,10 @@ This picture shows how you can use another language of code called CSS to style 
 
 ##### (show picture of finished product)
 Here is what the finished product of the buttons looked like. You can see the styling above is how I made them look like this.
+
+##### My Global contect is: Scientific and technical innovation
+
+##### My Inquiry question is: How do you create an app using coding?
+
+##### Why is this project personally meaningful and challenging
+This project is personally meaningful to me because  it something that I love doing and can open alot of doors for me in the future, there us si much more you can do with coding then just building an app. This was especially challenging because I need to put alot of time and research into this project and and learn different types of code. One really challenging thing about creating an app is if you get one character wrong, the whole thing breaks (which has happened multiple times during the making of this project).
