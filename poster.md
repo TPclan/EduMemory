@@ -17,3 +17,5 @@ Here is what the finished product of the buttons looked like. You can see the st
 
 ##### Why is this project personally meaningful and challenging
 This project is personally meaningful to me because  it something that I love doing and can open alot of doors for me in the future, there us si much more you can do with coding then just building an app. This was especially challenging because I need to put alot of time and research into this project and and learn different types of code. One really challenging thing about creating an app is if you get one character wrong, the whole thing breaks (which has happened multiple times during the making of this project).
+
+#### Key information and challenges about your project/ the developement of your project.
