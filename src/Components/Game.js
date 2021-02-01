@@ -16,6 +16,7 @@ import Background11 from "../img/cartoon-animals/card-11.png";
 import Background12 from "../img/cartoon-animals/card-12.png";
 import logo from "../icons/brain-2.svg";
 import { useTapGesture } from "framer-motion";
+import CardBack from "../img/CardBackBlue.png";
 
 function Game({ setPageStatus, pageStatus, flippedCount }) {
   const [options, setOptions] = useState(null);
@@ -278,6 +279,7 @@ function Card({
         style={{
           opacity: opacity.interpolate((o) => 1 - o),
           transform,
+          backgroundImage: `url(${CardBack})`,
         }}
       />
       <a.div
