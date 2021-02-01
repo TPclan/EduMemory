@@ -155,7 +155,6 @@ function MemoryGame({ options, setOptions, highScore, setHighScore }) {
         } else {
           score = 0;
         }
-
         if (score > highScore) {
           setHighScore(score);
           const json = JSON.stringify(score);
