@@ -22,7 +22,6 @@ Analyse methods to build our own improved version
 - card animation. change to gsap.
 - [x] hover effect over cards. maybe with shadow.
 
-
 ## To do - Functionality
 
 - [x] add individual pictures in exchange for the colours. Tom
