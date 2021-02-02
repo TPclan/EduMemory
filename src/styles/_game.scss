@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   background: lightblue;
+  align-items: center;
   h2 {
     margin: 1rem;
   }
@@ -100,7 +101,6 @@
 }
 .hovernow:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
-
 }
 .timer {
   display: flex;
@@ -116,7 +116,5 @@
   font-weight: 540;
 }
 
-  @media (max-width: $MobileWidth) {
-
-  }
+@media (max-width: $MobileWidth) {
 }
