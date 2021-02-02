@@ -16,9 +16,8 @@ import Background11 from "../img/cartoon-animals/card-11.png";
 import Background12 from "../img/cartoon-animals/card-12.png";
 import logo from "../icons/brain-2.svg";
 import CountUp from "react-countup";
-import { useTapGesture } from "framer-motion";
+//import { useTapGesture } from "framer-motion";
 import CardBack from "../img/CardBackBlue.png";
-
 
 function Game({ setPageStatus, pageStatus, flippedCount }) {
   const [options, setOptions] = useState(null);
@@ -36,7 +35,7 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
   return (
     <div className={`game ${pageStatus ? "active-game" : ""}`}>
       <div>
-        <button onClick={() => setPageStatus(0)} className="home-button">
+        <button className="home-button" onClick={() => setPageStatus(0)}>
           <img className="home-pic" src={HomeButton} alt="Home Button" />
         </button>
       </div>
@@ -48,9 +47,6 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
       <h2>Memory Game</h2>
 
       <div className="container">
-        <div>
-          <h4></h4>
-        </div>
         <div>
           {options === null ? (
             <h2>Choose a difficulty below to begin!</h2>
