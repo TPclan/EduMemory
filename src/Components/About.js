@@ -6,7 +6,7 @@ const About = ({ setPageStatus }) => {
   return (
     <div className="about">
       <div>
-        <button onClick={() => setPageStatus(0)} className="home-button">
+        <button className="home-button" onClick={() => setPageStatus(0)}>
           <img className="home-pic" src={HomeButton} alt="Home Button" />
         </button>
       </div>
@@ -14,7 +14,7 @@ const About = ({ setPageStatus }) => {
         <h1 className="logo-title">EduMemory</h1>
         <img className="brain-logo" alt="EduMemory logo" src={logo}></img>
       </div>
-      <div className="main-body">
+      <div>
         <h2>About Page</h2>
         <p>About page here.</p>
       </div>
