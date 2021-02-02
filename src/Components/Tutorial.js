@@ -15,7 +15,7 @@ const Tutorial = ({ setPageStatus }) => {
         <h1 className="logo-title">EduMemory</h1>
         <img className="brain-logo" alt="EduMemory logo" src={logo}></img>
       </div>
-      <div className="main-body">
+      <div>
         <h2>How do you play?</h2>
         <p>
           When you press play you will get 24 cards face down. <br /> Take a

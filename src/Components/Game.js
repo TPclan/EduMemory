@@ -16,6 +16,9 @@ import Background11 from "../img/cartoon-animals/card-11.png";
 import Background12 from "../img/cartoon-animals/card-12.png";
 import logo from "../icons/brain-2.svg";
 import CountUp from "react-countup";
+import { useTapGesture } from "framer-motion";
+import CardBack from "../img/CardBackBlue.png";
+
 
 function Game({ setPageStatus, pageStatus, flippedCount }) {
   const [options, setOptions] = useState(null);
@@ -163,7 +166,6 @@ function MemoryGame({ options, setOptions, highScore, setHighScore }) {
         } else {
           score = 0;
         }
-
         if (score > highScore) {
           setHighScore(score);
           const json = JSON.stringify(score);
@@ -285,6 +287,7 @@ function Card({
         style={{
           opacity: opacity.interpolate((o) => 1 - o),
           transform,
+          backgroundImage: `url(${CardBack})`,
         }}
       />
       <a.div
