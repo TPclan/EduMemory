@@ -7,11 +7,12 @@ import Tutorial from "./Components/Tutorial";
 //Import Styles
 import "./styles/app.scss";
 import { motion, AnimatePresence } from "framer-motion";
-import useWindowSize from "./useWindowSize";
+//import useWindowSize from "./useWindowSize";
 
 function App() {
   const [pageStatus, setPageStatus] = useState(0);
-  const windowSize = useWindowSize();
+  // Can use this if responsive components (e.g. 1 for Mobile & 1 for Desktop)
+  //const windowSize = useWindowSize();
   return (
     <div className="App">
       <section>

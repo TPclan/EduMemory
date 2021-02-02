@@ -91,28 +91,27 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
   );
 }
 
-//Game Board. Put in another file
+//Game Board
 function MemoryGame({ options, setOptions, highScore, setHighScore }) {
   const [game, setGame] = useState([]);
   const [flippedCount, setFlippedCount] = useState(0);
   const [flippedIndexes, setFlippedIndexes] = useState([]);
 
-  const colors = [
-    `url(${Background1})`,
-    `url(${Background13})`,
-    `url(${Background3})`,
-    `url(${Background4})`,
-    `url(${Background5})`,
-    `url(${Background6})`,
-    `url(${Background7})`,
-    `url(${Background8})`,
-    `url(${Background9})`,
-    `url(${Background14})`,
-    `url(${Background11})`,
-    `url(${Background12})`,
-  ];
-
   useEffect(() => {
+    const colors = [
+      `url(${Background1})`,
+      `url(${Background13})`,
+      `url(${Background3})`,
+      `url(${Background4})`,
+      `url(${Background5})`,
+      `url(${Background6})`,
+      `url(${Background7})`,
+      `url(${Background8})`,
+      `url(${Background9})`,
+      `url(${Background14})`,
+      `url(${Background11})`,
+      `url(${Background12})`,
+    ];
     const newGame = [];
     for (let i = 0; i < options / 2; i++) {
       const firstOption = {
@@ -134,7 +133,7 @@ function MemoryGame({ options, setOptions, highScore, setHighScore }) {
 
     const shuffledGame = newGame.sort(() => Math.random() - 0.5);
     setGame(shuffledGame);
-  }, []);
+  }, [options]);
 
   //Section that shows high score. Maybe change later as is a little confusing
   useEffect(() => {
@@ -180,7 +179,7 @@ function MemoryGame({ options, setOptions, highScore, setHighScore }) {
         }
       }, 500);
     }
-  }, [game]);
+  }, [game, flippedCount, highScore, options, setHighScore, setOptions]);
 
   // Runs if two cards have been flipped
   if (flippedIndexes.length === 2) {
@@ -254,7 +253,7 @@ function Card({
       setFlippedCount(flippedCount + 1);
       setFlippedIndexes([]);
     }
-  }, [flippedIndexes]);
+  }, [flippedIndexes, flippedCount, id, setFlippedCount, setFlippedIndexes]);
 
   const onCardClick = () => {
     if (!game[id].flipped && flippedCount % 3 === 0) {
