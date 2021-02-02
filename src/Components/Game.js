@@ -15,8 +15,10 @@ import Background14 from "../img/cartoon-animals/card-14.png";
 import Background11 from "../img/cartoon-animals/card-11.png";
 import Background12 from "../img/cartoon-animals/card-12.png";
 import logo from "../icons/brain-2.svg";
+import CountUp from "react-countup";
 import { useTapGesture } from "framer-motion";
 import CardBack from "../img/CardBackBlue.png";
+
 
 function Game({ setPageStatus, pageStatus, flippedCount }) {
   const [options, setOptions] = useState(null);
@@ -47,13 +49,21 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
 
       <div className="container">
         <div>
-          <h4>High Score: {highScore}</h4>
+          <h4></h4>
         </div>
         <div>
           {options === null ? (
             <h2>Choose a difficulty below to begin!</h2>
           ) : (
             <h2>Pick 2 cards!</h2>
+          )}
+          {options === null ? (
+            <h6> </h6>
+          ) : (
+            <div className="timer">
+              <h2>Time:</h2>
+              <CountUp className="CountUp1" end={2000} duration={20000} />
+            </div>
           )}
         </div>
         <div>
@@ -161,10 +171,8 @@ function MemoryGame({ options, setOptions, highScore, setHighScore }) {
           const json = JSON.stringify(score);
           localStorage.setItem("memorygamehighscore", json);
         }
-        //was getting error "Unexpected use of 'confirm' no-restricted-globals". Just needed to add "window."below
-        const newGame = window.confirm(
-          "You Win!, SCORE: " + score + " New Game?"
-        );
+        //Dont need highscore window tight now. Add different score method
+        const newGame = window.confirm("You Win!, New Game?");
         if (newGame) {
           const gameLength = game.length;
           setOptions(null);
@@ -245,7 +253,7 @@ function Card({
         set((state) => !state);
         setFlippedCount(flippedCount + 1);
         setFlippedIndexes([]);
-      }, 2300);
+      }, 2000);
     } else if (flippedIndexes[2] === false && id === 0) {
       setFlippedCount(flippedCount + 1);
       setFlippedIndexes([]);
