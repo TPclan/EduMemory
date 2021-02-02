@@ -15,8 +15,12 @@ const About = ({ setPageStatus }) => {
         <img className="brain-logo" alt="EduMemory logo" src={logo}></img>
       </div>
       <div>
-        <h2>About Page</h2>
-        <p>About page here.</p>
+        <h2>About My App</h2>
+        <p>
+          Hello! My name is Tom, and this is my first ever app, <br /> and the
+          beginning of the creatore of several more in the future! <br /> This
+          took a while to make and I hope you enjoy it! (Add Credits)
+        </p>
       </div>
     </div>
   );

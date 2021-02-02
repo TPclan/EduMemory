@@ -18,13 +18,12 @@ const Tutorial = ({ setPageStatus }) => {
       <div>
         <h2>How do you play?</h2>
         <p>
-          When you press play you will get 24 cards face down. <br /> Take a
-          wild guess! Click on any card and make sure to remember what is on the
-          other side of the card. <br /> Each card has a pair that goes with it,
-          try to flip both cards in one turn. <br /> At the end of the game you
-          will get a score, Easy starts at 100 points and each turn you lose 2
-          points. <br /> Medium starts at 115, and Hard starts at 130 points,
-          the less amount of turns it takes, the better the score!
+          When you press play you will get 12, 18, or 24 cards face down
+          depending on the level you choose. <br /> Take a wild guess! Click on
+          any card and make sure to remember what is on the other side of the
+          card. <br /> Each card has a pair that goes with it, try to flip both
+          cards in one turn. <br /> Theres a timer as well, try to beat your
+          last time!
         </p>
       </div>
     </div>
