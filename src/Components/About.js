@@ -18,8 +18,38 @@ const About = ({ setPageStatus }) => {
         <h2>About My App</h2>
         <p>
           Hello! My name is Tom, and this is my first ever app, <br /> and the
-          beginning of the creatore of several more in the future! <br /> This
-          took a while to make and I hope you enjoy it! (Add Credits)
+          beginning of the creation of several more in the future! <br /> This
+          took a while to make and I hope you enjoy it!
+        </p>
+        <h2>Credits:</h2>
+        <p>
+          I used{" "}
+          <a href="https://code.visualstudio.com/" target="_blank">
+            Visual Studio Code
+          </a>{" "}
+          to write my code for this project. <br />I used{" "}
+          <a href="https://github.com" target="_blank">
+            {" "}
+            GitHub
+          </a>{" "}
+          to store and share my code.
+          <br />I used{" "}
+          <a href="https://developedbyed.com/" target="_blank">
+            This Coarse
+          </a>{" "}
+          to help me learn HTML and CSS.
+          <br />I used{" "}
+          <a href="https://watchandcode.com/" target="_blank">
+            This Coarse
+          </a>{" "}
+          to help me learn JavaScript. <br />
+          <a
+            href="https://reactjsexample.com/a-simple-memory-game-with-react-js/"
+            target="_blank"
+          >
+            This
+          </a>{" "}
+          is the memory game that I based mine off of.
         </p>
       </div>
     </div>
