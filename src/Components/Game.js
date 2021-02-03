@@ -19,7 +19,6 @@ import CountUp from "react-countup";
 import { useTapGesture } from "framer-motion";
 import CardBack from "../img/CardBackBlue.png";
 
-
 function Game({ setPageStatus, pageStatus, flippedCount }) {
   const [options, setOptions] = useState(null);
   const [highScore, setHighScore] = useState(0);
@@ -66,7 +65,7 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
             </div>
           )}
         </div>
-        <div>
+        <div className="difficulty">
           {options === null ? (
             <>
               <button onClick={() => setOptions(12)}>Easy</button>
