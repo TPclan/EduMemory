@@ -16,7 +16,7 @@ import Background11 from "../img/cartoon-animals/card-11.png";
 import Background12 from "../img/cartoon-animals/card-12.png";
 import logo from "../icons/brain-2.svg";
 import CountUp from "react-countup";
-import { useTapGesture } from "framer-motion";
+//import { useTapGesture } from "framer-motion";
 import CardBack from "../img/CardBackBlue.png";
 
 function Game({ setPageStatus, pageStatus, flippedCount }) {
@@ -35,7 +35,7 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
   return (
     <div className={`game ${pageStatus ? "active-game" : ""}`}>
       <div>
-        <button onClick={() => setPageStatus(0)} className="home-button">
+        <button className="home-button" onClick={() => setPageStatus(0)}>
           <img className="home-pic" src={HomeButton} alt="Home Button" />
         </button>
       </div>
@@ -47,9 +47,6 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
       <h2>Memory Game</h2>
 
       <div className="container">
-        <div>
-          <h4></h4>
-        </div>
         <div>
           {options === null ? (
             <h2>Choose a difficulty below to begin!</h2>
@@ -94,28 +91,27 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
   );
 }
 
-//Game Board. Put in another file
+//Game Board
 function MemoryGame({ options, setOptions, highScore, setHighScore }) {
   const [game, setGame] = useState([]);
   const [flippedCount, setFlippedCount] = useState(0);
   const [flippedIndexes, setFlippedIndexes] = useState([]);
 
-  const colors = [
-    `url(${Background1})`,
-    `url(${Background13})`,
-    `url(${Background3})`,
-    `url(${Background4})`,
-    `url(${Background5})`,
-    `url(${Background6})`,
-    `url(${Background7})`,
-    `url(${Background8})`,
-    `url(${Background9})`,
-    `url(${Background14})`,
-    `url(${Background11})`,
-    `url(${Background12})`,
-  ];
-
   useEffect(() => {
+    const colors = [
+      `url(${Background1})`,
+      `url(${Background13})`,
+      `url(${Background3})`,
+      `url(${Background4})`,
+      `url(${Background5})`,
+      `url(${Background6})`,
+      `url(${Background7})`,
+      `url(${Background8})`,
+      `url(${Background9})`,
+      `url(${Background14})`,
+      `url(${Background11})`,
+      `url(${Background12})`,
+    ];
     const newGame = [];
     for (let i = 0; i < options / 2; i++) {
       const firstOption = {
@@ -137,7 +133,7 @@ function MemoryGame({ options, setOptions, highScore, setHighScore }) {
 
     const shuffledGame = newGame.sort(() => Math.random() - 0.5);
     setGame(shuffledGame);
-  }, []);
+  }, [options]);
 
   //Section that shows high score. Maybe change later as is a little confusing
   useEffect(() => {
@@ -183,7 +179,7 @@ function MemoryGame({ options, setOptions, highScore, setHighScore }) {
         }
       }, 500);
     }
-  }, [game]);
+  }, [game, flippedCount, highScore, options, setHighScore, setOptions]);
 
   // Runs if two cards have been flipped
   if (flippedIndexes.length === 2) {
@@ -257,7 +253,7 @@ function Card({
       setFlippedCount(flippedCount + 1);
       setFlippedIndexes([]);
     }
-  }, [flippedIndexes]);
+  }, [flippedIndexes, flippedCount, id, setFlippedCount, setFlippedIndexes]);
 
   const onCardClick = () => {
     if (!game[id].flipped && flippedCount % 3 === 0) {
