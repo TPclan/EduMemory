@@ -22,6 +22,12 @@ const About = ({ setPageStatus }) => {
           took a while to make and I hope you enjoy it!
         </p>
         <h2>Credits:</h2>
+
+        <ul>
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Milk</li>
+        </ul>
         <p>
           <a
             href="https://code.visualstudio.com/"
