@@ -15,6 +15,7 @@
   width: 3rem;
   border-radius: 0px;
   margin-top: 1rem;
+  z-index: 100;
 }
 // These ones are from Home
 h1 {
@@ -31,6 +32,7 @@ h1 {
   width: 30%;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  z-index: 100;
 }
 //Home button behavior is here
 .home-button {

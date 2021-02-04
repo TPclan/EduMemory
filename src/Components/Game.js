@@ -44,8 +44,6 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
         <img className="brain-logo" alt="EduMemory logo" src={logo}></img>
       </div>
 
-      <h2>Memory Game</h2>
-
       <div className="container">
         <div>
           {options === null ? (
@@ -166,7 +164,7 @@ function MemoryGame({ options, setOptions, highScore, setHighScore }) {
           const json = JSON.stringify(score);
           localStorage.setItem("memorygamehighscore", json);
         }
-        //Dont need highscore window tight now. Add different score method
+        //Don't need high score window right now. Add different score method
         const newGame = window.confirm("You Win!, New Game?");
         if (newGame) {
           const gameLength = game.length;
