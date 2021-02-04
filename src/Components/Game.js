@@ -62,7 +62,7 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
             </div>
           )}
         </div>
-        <div>
+        <div className="difficulty">
           {options === null ? (
             <>
               <button onClick={() => setOptions(12)}>Easy</button>
@@ -248,7 +248,7 @@ function Card({
         set((state) => !state);
         setFlippedCount(flippedCount + 1);
         setFlippedIndexes([]);
-      }, 2000);
+      }, 1800);
     } else if (flippedIndexes[2] === false && id === 0) {
       setFlippedCount(flippedCount + 1);
       setFlippedIndexes([]);
