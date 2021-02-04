@@ -10,6 +10,11 @@
     margin: 0rem;
     z-index: 101;
   }
+  @media (max-width: $MobileWidth) {
+    h2 {
+      font-size: 1.3rem;
+    }
+  }
 }
 
 //Temporary style. Will need to do this properly later
