@@ -22,7 +22,6 @@ const About = ({ setPageStatus }) => {
         </p>
         <h2>Credits:</h2>
         <p>
-          I used{" "}
           <a
             href="https://code.visualstudio.com/"
             target="_blank"
@@ -30,7 +29,9 @@ const About = ({ setPageStatus }) => {
           >
             Visual Studio Code
           </a>{" "}
-          to write my code for this project. <br />I used{" "}
+          is now my favourite code editor for building and debugging modern web
+          applications. Thank you Microsoft.
+          <br />I used{" "}
           <a href="https://github.com" target="_blank" rel="noreferrer">
             {" "}
             GitHub
@@ -38,12 +39,12 @@ const About = ({ setPageStatus }) => {
           to store and share my code.
           <br />I used{" "}
           <a href="https://developedbyed.com/" target="_blank" rel="noreferrer">
-            This Coarse
+            This Course
           </a>{" "}
           to help me learn HTML and CSS.
           <br />I used{" "}
           <a href="https://watchandcode.com/" target="_blank" rel="noreferrer">
-            This Coarse
+            This Course
           </a>{" "}
           to help me learn JavaScript. <br />
           <a
