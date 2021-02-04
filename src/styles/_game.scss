@@ -22,6 +22,7 @@
   margin-bottom: 20px;
   @media (max-width: $MobileWidth) {
     width: 700px;
+    margin: none;
   }
 }
 
@@ -100,7 +101,10 @@
   }
 }
 .hovernow:hover {
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+  @media (max-width: $MobileWidth) {
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.8);
+  }
 }
 .timer {
   display: flex;
@@ -114,4 +118,12 @@
 .CountUp1 {
   font-size: 1.6rem;
   font-weight: 540;
+}
+
+.difficulty {
+  @media (max-width: $MobileWidth) {
+    display: flex;
+    flex-direction: column;
+    padding: none;
+  }
 }
