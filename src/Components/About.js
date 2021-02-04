@@ -21,12 +21,6 @@ const About = ({ setPageStatus }) => {
           took a while to make and I hope you enjoy it!
         </p>
         <h2>Credits:</h2>
-
-        <ul>
-          <li>Coffee</li>
-          <li>Tea</li>
-          <li>Milk</li>
-        </ul>
         <p>
           <a
             href="https://code.visualstudio.com/"
@@ -35,24 +29,24 @@ const About = ({ setPageStatus }) => {
           >
             Visual Studio Code
           </a>{" "}
-          is now my favourite code editor for building and debugging modern web
-          applications. Thank you Microsoft.
-          <br />I used{" "}
+          is now my favorite code editor for building <br /> and debugging
+          modern web applications. Thank you Microsoft.
+          <br />
           <a href="https://github.com" target="_blank" rel="noreferrer">
             {" "}
             GitHub
           </a>{" "}
-          to store and share my code.
-          <br />I used{" "}
+          is a place to store and share my code.
+          <br />
           <a href="https://developedbyed.com/" target="_blank" rel="noreferrer">
             This Course
           </a>{" "}
-          to help me learn HTML and CSS.
-          <br />I used{" "}
+          helped me learn HTML and CSS.
+          <br />
           <a href="https://watchandcode.com/" target="_blank" rel="noreferrer">
             This Course
           </a>{" "}
-          to help me learn JavaScript. <br />
+          helped me learn JavaScript. <br />
           <a
             href="https://reactjsexample.com/a-simple-memory-game-with-react-js/"
             target="_blank"
