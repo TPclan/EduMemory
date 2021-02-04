@@ -19,10 +19,14 @@ import restart from "../icons/restart.svg";
 import CountUp from "react-countup";
 //import { useTapGesture } from "framer-motion";
 import CardBack from "../img/CardBackBlue.png";
+import useWindowSize from "../useWindowSize";
 
 function Game({ setPageStatus, pageStatus, flippedCount }) {
   const [options, setOptions] = useState(null);
   const [highScore, setHighScore] = useState(0);
+  // Can use this if responsive components (e.g. 1 for Mobile & 1 for Desktop)
+  const windowSize = useWindowSize();
+  // const isMobile = windowSize === "useMobileVersion";
 
   //This will check to see if new score is high score
   useEffect(() => {
@@ -36,15 +40,26 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
   return (
     <div className={`game ${pageStatus ? "active-game" : ""}`}>
       <div>
-        <button className="home-button" onClick={() => setPageStatus(0)}>
-          <img className="home-pic" src={HomeButton} alt="Home Button" />
-        </button>
-        {/* <button className="restart-button" onClick={() => setOptions(null)}>
+        <div className="top-nav">
+          <button className="home-button" onClick={() => setPageStatus(0)}>
+            <img className="home-pic" src={HomeButton} alt="Home Button" />
+          </button>
+          {/* <button className="restart-button" onClick={() => setOptions(null)}>
           <img className="restart" src={restart} alt="Restart" />
         </button> */}
-      </div>
-      <div className="logo-title-div">
-        <h1 className="logo-title">EduMemory</h1>
+        </div>
+        <div className="logo-title-div">
+          <h1 className="logo-title">EduMemory</h1>
+          {options === null ? (
+            <h6> </h6>
+          ) : (
+            <div className="timer">
+              <h3>
+                Time: <CountUp className="" end={2000} duration={20000} />
+              </h3>
+            </div>
+          )}
+        </div>
       </div>
 
       <div className="container">
@@ -54,20 +69,16 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
           ) : (
             <h2>Pick 2 cards!</h2>
           )}
-          {options === null ? (
-            <h6> </h6>
-          ) : (
-            <div className="timer">
-              <h2>Time: </h2>
-              <CountUp className="CountUp1" end={2000} duration={20000} />
-            </div>
-          )}
         </div>
         <div className="difficulty">
           {options === null ? (
             <>
-              <button onClick={() => setOptions(12)}>Easy</button>
-              <button onClick={() => setOptions(18)}>Medium</button>
+              <button onClick={() => setOptions(12)}>Easy</button>;
+              {windowSize === "useMobileVersion" ? (
+                <button onClick={() => setOptions(16)}>Medium</button>
+              ) : (
+                <button onClick={() => setOptions(18)}>Medium</button>
+              )}
               <button onClick={() => setOptions(24)}>Hard</button>
             </>
           ) : (
