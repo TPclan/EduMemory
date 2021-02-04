@@ -1,5 +1,5 @@
 .game {
-  min-height: 100vh;
+  min-height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -8,15 +8,12 @@
   align-items: center;
   h2 {
     margin: 0rem;
-    z-index: 101;
   }
 }
 
-//Temporary style. Will need to do this properly later
-
 .container {
   width: 1060px;
-  margin: 0;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,14 +88,7 @@
 
 //This controls the hover effect over the cards
 .timer {
-  display: flex;
-  align-items: center;
-  padding-top: 50px;
-  padding-right: 10px;
-}
-.CountUp1 {
-  font-size: 1.6rem;
-  font-weight: 540;
+  margin: 0 0 0 1rem;
 }
 
 .difficulty {

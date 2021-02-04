@@ -1,15 +1,20 @@
 // These 3 are from the game file.
+.top-nav {
+  margin-top: 4rem;
+}
+
 .logo-title-div {
   display: flex;
+  flex-direction: column;
   position: absolute;
   top: 0;
   left: 0;
 }
 .logo-title {
   font-family: $LogoFont;
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
-  margin: 1rem;
+  margin: 1rem 1rem 0rem 1rem;
 }
 .brain-logo {
   width: 0rem;
