@@ -17,11 +17,11 @@ const Tutorial = ({ setPageStatus }) => {
       <div>
         <h2>How do you play?</h2>
         <p>
-          When you press play you will get 12, 18, or 24 cards <br /> face down
-          depending on the level you choose. <br /> Take a wild guess! Click on
-          any card and make sure to <br /> remember what is on the other side of
-          the card. <br /> Each card has a pair that goes with it, try to flip
-          both cards
+          When you press play you will get some cards <br /> face down depending
+          on the level you choose. <br /> Take a wild guess! Click on any card
+          and make sure to <br /> remember what is on the other side of the
+          card. <br /> Each card has a pair that goes with it, try to flip both
+          cards
           <br /> in one turn. Theres a timer as well, try to beat your last
           time!
         </p>
