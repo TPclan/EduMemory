@@ -55,7 +55,7 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
             <h6> </h6>
           ) : (
             <div className="timer">
-              <h2>Time:</h2>
+              <h2>Time: </h2>
               <CountUp className="CountUp1" end={2000} duration={20000} />
             </div>
           )}
