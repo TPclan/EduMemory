@@ -15,6 +15,7 @@ import Background14 from "../img/cartoon-animals/card-14.png";
 import Background11 from "../img/cartoon-animals/card-11.png";
 import Background12 from "../img/cartoon-animals/card-12.png";
 import logo from "../icons/brain-2.svg";
+import restart from "../icons/restart.svg";
 import CountUp from "react-countup";
 //import { useTapGesture } from "framer-motion";
 import CardBack from "../img/CardBackBlue.png";
@@ -69,7 +70,9 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
             </>
           ) : (
             <>
-              <button onClick={() => setOptions(null)}>Restart</button>
+              <button onClick={() => setOptions(null)}>
+                <img className="restart" src={restart} alt="Restart" />
+              </button>
             </>
           )}
         </div>
