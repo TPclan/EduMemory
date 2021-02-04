@@ -21,10 +21,6 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
-  @media (max-width: $TabletWidth) {
-    width: 650px;
-    margin: none;
-  }
   @media (max-width: $MobileWidth) {
     width: 400px;
     margin: none;
@@ -36,12 +32,9 @@
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  @media (max-width: $TabletWidth) {
-    width: 650px;
-  }
   @media (max-width: $MobileWidth) {
     width: 400px;
-    margin: none;
+    margin: 0px;
   }
 }
 
@@ -49,25 +42,23 @@
   width: 160px;
   height: 160px;
   margin-bottom: 20px;
-  @media (max-width: $TabletWidth) {
+  @media (max-width: $MobileWidth) {
     display: flex;
     flex-direction: column;
     width: 100px;
     height: 100px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   }
 }
 .card:not(:nth-child(6n)) {
   margin-right: 20px;
-  @media (max-width: $TabletWidth) {
-    margin-right: 10px;
-  }
   @media (max-width: $MobileWidth) {
-    margin-right: 5px;
+    margin-right: 0px;
   }
 }
 
 .c {
+  margin: 0rem;
   position: absolute;
   max-width: 160px;
   max-height: 160px;
@@ -75,17 +66,11 @@
   height: 50ch;
   cursor: pointer;
   will-change: transform, opacity;
-  @media (max-width: $TabletWidth) {
-    max-width: 160px;
-    max-height: 160px;
-    width: 60ch;
-    height: 60ch;
-  }
   @media (max-width: $MobileWidth) {
-    max-width: 90px;
-    max-height: 90px;
-    width: 23ch;
-    height: 23ch;
+    max-width: 80px;
+    max-height: 80px;
+    width: 20ch;
+    height: 20ch;
   }
 }
 
@@ -105,27 +90,6 @@
 }
 
 //This controls the hover effect over the cards
-.hovernow {
-  background-color: transparent;
-  border-radius: 20px;
-  width: 152px;
-  height: 152px;
-  margin: 10px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-  transition: box-shadow 0.3s ease-in-out;
-  @media (max-width: $MobileWidth) {
-    width: 90px;
-    height: 90px;
-    border-radius: 20px;
-    margin: 5px;
-  }
-}
-.hovernow:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
-  @media (max-width: $TabletWidth) {
-    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.8);
-  }
-}
 .timer {
   display: flex;
   align-items: center;
