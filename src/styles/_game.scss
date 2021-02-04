@@ -100,7 +100,7 @@
   }
 }
 .hovernow:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
 }
 .timer {
   display: flex;
@@ -114,7 +114,4 @@
 .CountUp1 {
   font-size: 1.6rem;
   font-weight: 540;
-}
-
-@media (max-width: $MobileWidth) {
 }
