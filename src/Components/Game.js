@@ -15,6 +15,7 @@ import Background14 from "../img/cartoon-animals/card-14.png";
 import Background11 from "../img/cartoon-animals/card-11.png";
 import Background12 from "../img/cartoon-animals/card-12.png";
 import logo from "../icons/brain-2.svg";
+import restart from "../icons/restart.svg";
 import CountUp from "react-countup";
 //import { useTapGesture } from "framer-motion";
 import CardBack from "../img/CardBackBlue.png";
@@ -41,15 +42,12 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
       </div>
       <div className="logo-title-div">
         <h1 className="logo-title">EduMemory</h1>
-        <img className="brain-logo" alt="EduMemory logo" src={logo}></img>
       </div>
-
-      <h2>Memory Game</h2>
 
       <div className="container">
         <div>
           {options === null ? (
-            <h2>Choose a difficulty below to begin!</h2>
+            <h2>Choose a difficulty to begin!</h2>
           ) : (
             <h2>Pick 2 cards!</h2>
           )}
@@ -71,7 +69,12 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
             </>
           ) : (
             <>
-              <button onClick={() => setOptions(null)}>Restart</button>
+              <button
+                className="restart-button"
+                onClick={() => setOptions(null)}
+              >
+                <img className="restart" src={restart} alt="Restart" />
+              </button>
             </>
           )}
         </div>
@@ -166,7 +169,7 @@ function MemoryGame({ options, setOptions, highScore, setHighScore }) {
           const json = JSON.stringify(score);
           localStorage.setItem("memorygamehighscore", json);
         }
-        //Dont need highscore window tight now. Add different score method
+        //Don't need high score window right now. Add different score method
         const newGame = window.confirm("You Win!, New Game?");
         if (newGame) {
           const gameLength = game.length;
