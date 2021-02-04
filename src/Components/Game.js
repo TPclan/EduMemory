@@ -39,6 +39,9 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
         <button className="home-button" onClick={() => setPageStatus(0)}>
           <img className="home-pic" src={HomeButton} alt="Home Button" />
         </button>
+        {/* <button className="restart-button" onClick={() => setOptions(null)}>
+          <img className="restart" src={restart} alt="Restart" />
+        </button> */}
       </div>
       <div className="logo-title-div">
         <h1 className="logo-title">EduMemory</h1>
@@ -68,14 +71,7 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
               <button onClick={() => setOptions(24)}>Hard</button>
             </>
           ) : (
-            <>
-              <button
-                className="restart-button"
-                onClick={() => setOptions(null)}
-              >
-                <img className="restart" src={restart} alt="Restart" />
-              </button>
-            </>
+            <></>
           )}
         </div>
       </div>
