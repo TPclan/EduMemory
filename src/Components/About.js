@@ -24,28 +24,33 @@ const About = ({ setPageStatus }) => {
         <h2>Credits:</h2>
         <p>
           I used{" "}
-          <a href="https://code.visualstudio.com/" target="_blank">
+          <a
+            href="https://code.visualstudio.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
             Visual Studio Code
           </a>{" "}
           to write my code for this project. <br />I used{" "}
-          <a href="https://github.com" target="_blank">
+          <a href="https://github.com" target="_blank" rel="noreferrer">
             {" "}
             GitHub
           </a>{" "}
           to store and share my code.
           <br />I used{" "}
-          <a href="https://developedbyed.com/" target="_blank">
+          <a href="https://developedbyed.com/" target="_blank" rel="noreferrer">
             This Coarse
           </a>{" "}
           to help me learn HTML and CSS.
           <br />I used{" "}
-          <a href="https://watchandcode.com/" target="_blank">
+          <a href="https://watchandcode.com/" target="_blank" rel="noreferrer">
             This Coarse
           </a>{" "}
           to help me learn JavaScript. <br />
           <a
             href="https://reactjsexample.com/a-simple-memory-game-with-react-js/"
             target="_blank"
+            rel="noreferrer"
           >
             This
           </a>{" "}

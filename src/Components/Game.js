@@ -256,7 +256,7 @@ function Card({
       setFlippedCount(flippedCount + 1);
       setFlippedIndexes([]);
     }
-  }, [flippedIndexes, flippedCount, id, setFlippedCount, setFlippedIndexes]);
+  }, [flippedIndexes]);
 
   const onCardClick = () => {
     if (!game[id].flipped && flippedCount % 3 === 0) {

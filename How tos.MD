@@ -8,7 +8,8 @@
 ##
 
 - Cheat sheets! https://htmlcheatsheet.com/css/
-
+- A great Word Cloud generator https://wordart.com
+- url shortener you can edit links afterwards https://app.rebrandly.com/links
 - NPM shortcuts https://www.freecodecamp.org/news/npm-cheat-sheet-most-common-commands-and-nvm/
 - Page transitions https://dev.to/joserfelix/page-transitions-in-react-1c8g
 - more advanced transition code with Scott with Framer Motion and React Router (cool)
