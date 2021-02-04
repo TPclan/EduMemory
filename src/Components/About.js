@@ -16,9 +16,10 @@ const About = ({ setPageStatus }) => {
       <div>
         <h2>About My App</h2>
         <p>
-          Hello! My name is Tom, and this is my first ever app, <br /> and the
-          beginning of the creation of several more in the future! <br /> This
-          took a while to make and I hope you enjoy it!
+          Hello! My name is Tom, and this is my first <br />
+          ever app, and the beginning of the creation <br />
+          of several more in the future! This took a <br />
+          while to make and I hope you enjoy it!
         </p>
         <h2>Credits:</h2>
         <p>
@@ -29,19 +30,21 @@ const About = ({ setPageStatus }) => {
           >
             Visual Studio Code
           </a>{" "}
-          is now my favorite code editor for building <br /> and debugging
-          modern web applications. Thank you Microsoft.
+          is now my favorite code <br />
+          editor for building <br />
+          and debugging modern web <br />
+          applications.
           <br />
           <a href="https://github.com" target="_blank" rel="noreferrer">
             {" "}
             GitHub
           </a>{" "}
-          is a place to store and share my code.
+          is a place to store and <br /> share my code.
           <br />
           <a href="https://developedbyed.com/" target="_blank" rel="noreferrer">
             This Course
           </a>{" "}
-          helped me learn HTML and CSS.
+          helped me learn HTML <br /> and CSS.
           <br />
           <a href="https://watchandcode.com/" target="_blank" rel="noreferrer">
             This Course
@@ -54,7 +57,8 @@ const About = ({ setPageStatus }) => {
           >
             This
           </a>{" "}
-          is the memory game that I based mine off of.
+          is the memory game that I <br />
+          based mine off of.
         </p>
       </div>
     </div>
