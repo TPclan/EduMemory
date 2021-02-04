@@ -32,7 +32,7 @@ const About = ({ setPageStatus }) => {
             Visual Studio Code
           </a>{" "}
           to write my code for this project. <br />I used{" "}
-          <a href="https://github.com" target="_blank">
+          <a href="https://github.com" target="_blank" rel="noreferrer">
             {" "}
             GitHub
           </a>{" "}
