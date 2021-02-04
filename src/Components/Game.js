@@ -42,7 +42,6 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
       </div>
       <div className="logo-title-div">
         <h1 className="logo-title">EduMemory</h1>
-        <img className="brain-logo" alt="EduMemory logo" src={logo}></img>
       </div>
 
       <div className="container">
