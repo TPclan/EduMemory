@@ -48,7 +48,7 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
       <div className="container">
         <div>
           {options === null ? (
-            <h2>Choose a difficulty below to begin!</h2>
+            <h2>Choose a difficulty to begin!</h2>
           ) : (
             <h2>Pick 2 cards!</h2>
           )}
@@ -70,7 +70,10 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
             </>
           ) : (
             <>
-              <button onClick={() => setOptions(null)}>
+              <button
+                className="restart-button"
+                onClick={() => setOptions(null)}
+              >
                 <img className="restart" src={restart} alt="Restart" />
               </button>
             </>

@@ -7,7 +7,7 @@
   background: lightblue;
   align-items: center;
   h2 {
-    margin: 1rem;
+    margin: 0rem;
     z-index: 101;
   }
 }
@@ -16,7 +16,7 @@
 
 .container {
   width: 1060px;
-  margin: 0 auto;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,10 +76,16 @@
   cursor: pointer;
   will-change: transform, opacity;
   @media (max-width: $TabletWidth) {
-    max-width: 100px;
-    max-height: 100px;
-    width: 30ch;
-    height: 30ch;
+    max-width: 160px;
+    max-height: 160px;
+    width: 60ch;
+    height: 60ch;
+  }
+  @media (max-width: $MobileWidth) {
+    max-width: 90px;
+    max-height: 90px;
+    width: 23ch;
+    height: 23ch;
   }
 }
 
@@ -107,9 +113,9 @@
   margin: 10px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.3s ease-in-out;
-  @media (max-width: $TabletWidth) {
-    width: 100px;
-    height: 100px;
+  @media (max-width: $MobileWidth) {
+    width: 90px;
+    height: 90px;
     border-radius: 20px;
     margin: 5px;
   }
@@ -123,9 +129,6 @@
 .timer {
   display: flex;
   align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
   padding-top: 50px;
   padding-right: 10px;
 }

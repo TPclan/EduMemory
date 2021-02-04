@@ -12,10 +12,13 @@
   margin: 1rem;
 }
 .brain-logo {
-  width: 3rem;
+  width: 0rem;
   border-radius: 0px;
   margin-top: 1rem;
   z-index: 100;
+  @media (max-width: $MobileWidth) {
+    width: 1rem;
+  }
 }
 // These ones are from Home
 h1 {
@@ -51,4 +54,29 @@ h1 {
   width: 2.5rem;
   border: none;
   background: none;
+  @media (max-width: $TabletWidth) {
+    width: 1.5rem;
+  }
+}
+.restart {
+  background: none;
+  width: 2.5rem;
+  border: none;
+  @media (max-width: $TabletWidth) {
+    width: 1.7rem;
+  }
+}
+.restart-button {
+  margin: 4.3rem 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  padding: 5px 5px;
+  border-radius: 15px;
+  border: none;
+  z-index: 1;
+  @media (max-width: $TabletWidth) {
+    margin: 10% 2.6%;
+  }
 }
