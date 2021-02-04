@@ -68,11 +68,7 @@
   width: 50ch;
   height: 50ch;
   cursor: pointer;
-  box-shadow: 0 5px 2px rgba(0, 0, 0, 0.15);
-  transition: box-shadow 0.3s ease-in-out;
-  &:hover {
-    box-shadow: 0px 5px 10px #474747;
-  }
+
   will-change: transform, opacity;
   @media (max-width: $MobileWidth) {
     max-width: 80px;
@@ -96,8 +92,13 @@
   border: 5px solid rgb(58, 138, 165);
   border-radius: 20px;
 }
-
 //This controls the hover effect over the cards
+// box-shadow: 0 5px 2px rgba(0, 0, 0, 0.15);
+// transition: box-shadow 0.3s ease-in-out;
+// &:hover {
+//   box-shadow: 0px 5px 10px #474747;
+// }
+
 .timer {
   margin: 0 0 0 1rem;
 }

@@ -73,7 +73,7 @@ function Game({ setPageStatus, pageStatus, flippedCount }) {
         <div className="difficulty">
           {options === null ? (
             <>
-              <button onClick={() => setOptions(12)}>Easy</button>;
+              <button onClick={() => setOptions(12)}>Easy</button>
               {windowSize === "useMobileVersion" ? (
                 <button onClick={() => setOptions(16)}>Medium</button>
               ) : (
