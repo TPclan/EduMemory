@@ -3,7 +3,7 @@
 ### What is my goal?
 My goal for this project was to make a working app using code that could possibly bring educational value in the future. 
 
-                                                        2### Screen shots of development process and finished product
+### Screen shots of development process and finished product
 
 ##### (Picture of HTML for home page buttons)
 This picture is how you create a button using HTML. All you need to do is write a button tag that looks like this <button>(text on button)</button>. This will create a simple button that will like quite ugly.
