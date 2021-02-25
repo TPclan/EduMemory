@@ -1,5 +1,8 @@
 # Creating My Poster
 
+### What is my goal?
+My goal for this project was to make a working app using code that could possibly bring educational value in the future. 
+
 ### Screen shots of development process and finished product
 
 ##### (Picture of HTML for home page buttons)
